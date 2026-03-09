@@ -2,9 +2,12 @@
 
 ## Quick Start
 
+if you are working on secure_api we use uv.
+activate the venv with source .venv/bin/activate
+
 Activate environment before any Python:
 ```bash
-source /home/adamgab/miniconda3/etc/profile.d/conda.sh && conda activate NewtonModels && export PYTHONPATH=/home/adamgab/PycharmProjects/LabTools
+source /home/adamgab/miniconda3/etc/profile.d/conda.sh && conda activate LinearQueue && export PYTHONPATH=/home/adamgab/PycharmProjects/LabTools
 ```
 
 ## Critical Rules
@@ -68,6 +71,27 @@ result = regressions.cross_validate_model(X, y, cv_fold, model_key='all')
 eval_result = regressions.evaluate_predictions(X, y, result['predictions'])
 ```
 
+## Research Output Guidelines
+
+**The `.claude/` folder is for AI agents only** - it contains skills and patterns for conducting research.
+
+**For human-readable outputs, ALWAYS create:**
+1. **Research folder**: `research/<study_name>/`
+2. **Analysis code**: `analysis.py` - main reproducible analysis script
+3. **PDF report**: `report.pdf` - visual summary following `create-report` skill
+4. **Findings doc**: `FINDINGS.md` - detailed explanations, limitations, interpretation
+
+```
+research/
+└── osa_glycemic_variability/     # Example study
+    ├── analysis.py               # Main analysis code
+    ├── report.pdf                # Visual PDF report
+    ├── FINDINGS.md               # Detailed documentation
+    └── figures/                  # Individual figures
+        ├── main_finding.png
+        └── ...
+```
+
 ## Creating New Research Tools
 
 When creating new analysis capabilities:
@@ -84,6 +108,8 @@ When creating new analysis capabilities:
 | Study Cohorts | `.claude/study-cohorts.md` | HPP cohort types (10K, BRCA, T1D, etc.); when to filter/stratify by cohort |
 | Family History | `.claude/family-history.md` | Family medical conditions (48 features) and background (13 features); hereditary risk |
 | Create Report | `.claude/create-report.md` | Guidelines for creating clean PDF reports with figures |
+| Cross-Sectional Study | `.claude/cross-sectional-association-study.md` | Pattern for exposure-outcome association studies with confound control |
+| HPP Data Insights | `.claude/hpp-data-insights.md` | Empirical observations about data distributions, validated associations, and unexpected findings |
 
 ## Available Body Systems
 Age_Gender_BMI, blood_lipids, body_composition, bone_density, cardiovascular_system,

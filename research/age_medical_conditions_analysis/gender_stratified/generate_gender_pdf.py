@@ -9,7 +9,7 @@ import numpy as np
 import os
 from PIL import Image
 
-OUT = '/home/adamgab/PycharmProjects/LabTools/age_medical_conditions_analysis/gender_stratified'
+OUT = '/home/adamgab/PycharmProjects/LabTools/research/age_medical_conditions_analysis/gender_stratified'
 
 def add_image_page(pdf, image_path, title=None):
     """Add an image page to PDF."""
@@ -36,13 +36,13 @@ def add_text_page(pdf, content, fontsize=10):
     pdf.savefig(fig, bbox_inches='tight')
     plt.close(fig)
 
-print("Generating gender-stratified PDF report...")
+print("Generating gender-stratified PDF report with prevalence plots...")
 
 # Load results
-results = pd.read_csv(os.path.join(OUT, 'gender_stratified_results.csv'))
+results = pd.read_csv(os.path.join(OUT, 'gender_prevalence_results.csv'))
 print(f"Loaded {len(results)} conditions")
 
-pdf_path = os.path.join(OUT, 'Gender_Stratified_Report.pdf')
+pdf_path = os.path.join(OUT, 'Gender_Stratified_Prevalence_Report.pdf')
 
 with PdfPages(pdf_path) as pdf:
 
@@ -115,7 +115,7 @@ KEY FINDINGS
     print("  Added: Executive summary")
 
     # ===== SUMMARY COMPARISON PLOT =====
-    if add_image_page(pdf, os.path.join(OUT, 'summary_gender_differences.png'),
+    if add_image_page(pdf, os.path.join(OUT, 'summary_gender_prevalence_differences.png'),
                       'Conditions with Largest Gender Differences'):
         print("  Added: Summary gender differences")
 
@@ -216,14 +216,14 @@ KEY FINDINGS
     ]
 
     for cond in key_conditions:
-        fpath = os.path.join(OUT, f'gender_{cond}.png')
+        fpath = os.path.join(OUT, f'prev_gender_{cond}.png')
         if add_image_page(pdf, fpath):
             print(f"  Added: {cond}")
 
     # ===== SEX-SPECIFIC CONDITIONS =====
     sex_specific = ['Breast_Cancer', 'Polycystic_Ovary_Disease', 'Endometriosis_and_Adenomyosis']
     for cond in sex_specific:
-        fpath = os.path.join(OUT, f'gender_{cond}.png')
+        fpath = os.path.join(OUT, f'prev_gender_{cond}.png')
         if add_image_page(pdf, fpath, f'{cond.replace("_", " ")} (Sex-Specific)'):
             print(f"  Added: {cond}")
 
@@ -236,11 +236,14 @@ STATISTICAL MODEL
 • Separate logistic regressions for each gender
 • log(p/(1-p)) = β₀ + β₁ × Age
 • Performed independently for males and females
+• Prevalence shown as actual percentage (%)
 
 PLOT INTERPRETATION
-• Blue circles/line = Male data and fit
-• Red squares/line = Female data and fit
-• Dashed lines = Fitted regression
+• Blue circles/line = Male prevalence and fitted curve
+• Red squares/line = Female prevalence and fitted curve
+• Error bars = 95% confidence intervals (Wilson score)
+• Dashed lines = Fitted logistic regression curve
+• Y-axis = Prevalence (%) - actual percentage with condition
 • Legend shows sample size (n) and p-value
 
 ODDS RATIO INTERPRETATION

@@ -1,0 +1,190 @@
+================================================================================
+JEPA MODALITY FUSION HYPOTHESIS TESTING V2
+================================================================================
+
+[1/6] Loading embeddings...
+   DEXA: (11015, 768)
+   Retina: (9680, 768)
+   Pooled (deduplicated): (12937, 384)
+
+[2/6] Selecting outcomes...
+   Testing 16 outcomes across 4 categories
+
+[3/6] Loading outcome data...
+   Loaded Age_Gender_BMI: (24929, 3)
+   Loaded body_composition: (24929, 118)
+   Loaded cardiovascular_system: (24916, 167)
+   Loaded glycemic_status: (23745, 48)
+   Loaded immune_system: (23454, 11)
+
+[5/6] Running cross-validation...
+
+============================================================
+Category: SHARED
+============================================================
+
+Age (age):
+   DEXA    : n=10446  R²= 0.782  Spearman= 0.866
+   Retina  : n= 9604  R²= 0.763  Spearman= 0.883
+   Pooled  : n=12515  R²= 0.792  Spearman= 0.894
+
+BMI (bmi):
+   DEXA    : n=10419  R²= 0.915  Spearman= 0.953
+   Retina  : n= 9584  R²= 0.148  Spearman= 0.404
+   Pooled  : n=12481  R²= 0.808  Spearman= 0.895
+
+============================================================
+Category: DEXA_SPECIFIC
+============================================================
+
+Visceral Adipose Tissue Mass (total_scan_vat_mass):
+   DEXA    : n= 9746  R²= 0.077  Spearman=-0.190
+   Retina  : n= 9030  R²=-0.087  Spearman=-0.164
+   Pooled  : n=11737  R²= 0.048  Spearman=-0.308
+
+Subcutaneous Adipose Tissue Mass (total_scan_sat_mass):
+   DEXA    : n= 9783  R²= 0.043  Spearman= 0.002
+   Retina  : n= 9034  R²=-0.110  Spearman=-0.029
+   Pooled  : n=11756  R²= 0.011  Spearman=-0.104
+
+Total Bone Mineral Density (body_comp_total_bone_mineral_density):
+   ERROR: body_comp_total_bone_mineral_density not in body_composition
+   DEXA    : No data
+   ERROR: body_comp_total_bone_mineral_density not in body_composition
+   Retina  : No data
+   ERROR: body_comp_total_bone_mineral_density not in body_composition
+   Pooled  : No data
+
+Total Lean Mass (body_comp_total_lean_mass):
+   DEXA    : n= 9825  R²= 0.846  Spearman= 0.917
+   Retina  : n= 9103  R²= 0.420  Spearman= 0.661
+   Pooled  : n=11814  R²= 0.771  Spearman= 0.872
+
+Body Fat Percentage (body_comp_total_fat_percentage):
+   ERROR: body_comp_total_fat_percentage not in body_composition
+   DEXA    : No data
+   ERROR: body_comp_total_fat_percentage not in body_composition
+   Retina  : No data
+   ERROR: body_comp_total_fat_percentage not in body_composition
+   Pooled  : No data
+
+Weight (weight):
+   DEXA    : n=10419  R²= 0.821  Spearman= 0.901
+   Retina  : n= 9585  R²= 0.213  Spearman= 0.484
+   Pooled  : n=12481  R²= 0.710  Spearman= 0.839
+
+============================================================
+Category: RETINA_SPECIFIC
+============================================================
+
+Retinal Artery Width (automorph_artery_average_width):
+   DEXA    : n= 4791  R²=-0.087  Spearman= 0.185
+   Retina  : n= 7637  R²= 0.312  Spearman= 0.572
+   Pooled  : n= 7478  R²= 0.286  Spearman= 0.544
+
+Retinal Vein Width (automorph_vein_average_width):
+   DEXA    : n= 4791  R²=-0.115  Spearman= 0.115
+   Retina  : n= 7637  R²= 0.210  Spearman= 0.488
+   Pooled  : n= 7478  R²= 0.164  Spearman= 0.432
+
+Artery Tortuosity (automorph_artery_tortuosity_density):
+   DEXA    : n= 4791  R²=-0.178  Spearman= 0.034
+   Retina  : n= 7637  R²=-0.065  Spearman= 0.147
+   Pooled  : n= 7478  R²=-0.042  Spearman= 0.121
+
+Cup-to-Disc Ratio (automorph_cdr_vertical):
+   DEXA    : n=  672  R²=-0.656  Spearman= 0.111
+   Retina  : n= 3420  R²=-0.320  Spearman= 0.011
+   Pooled  : n= 2339  R²=-0.165  Spearman= 0.024
+
+Retinal Fractal Dimension (automorph_fractal_dimension):
+   DEXA    : n= 4791  R²=-0.086  Spearman= 0.166
+   Retina  : n= 7637  R²= 0.484  Spearman= 0.652
+   Pooled  : n= 7478  R²= 0.288  Spearman= 0.499
+
+============================================================
+Category: CROSS_MODAL
+============================================================
+
+Glucose (bt__glucose):
+   DEXA    : n= 3059  R²=-0.119  Spearman= 0.221
+   Retina  : n= 6235  R²=-0.073  Spearman= 0.163
+   Pooled  : n= 5272  R²= 0.053  Spearman= 0.279
+
+HbA1c (bt__hba1c):
+   DEXA    : n= 1508  R²=-0.399  Spearman= 0.174
+   Retina  : n= 3098  R²=-0.275  Spearman= 0.135
+   Pooled  : n= 2628  R²=-0.049  Spearman= 0.242
+
+White Blood Cell Count (bt__wbc):
+   DEXA    : n=10004  R²= 0.024  Spearman= 0.249
+   Retina  : n= 8503  R²=-0.074  Spearman= 0.104
+   Pooled  : n=11545  R²= 0.036  Spearman= 0.247
+
+[6/6] Saving results...
+
+   Saved to: /home/adamgab/PycharmProjects/LabTools/research/jepa_modality_fusion_hypothesis/hypothesis_test_results.csv
+
+================================================================================
+HYPOTHESIS TEST SUMMARY
+================================================================================
+
+SHARED:
+--------------------------------------------------------------------------------
+embedding_type  DEXA  Pooled  Retina
+outcome                             
+Age            0.782   0.792   0.763
+BMI            0.915   0.808   0.148
+
+Best embedding per outcome:
+   Age                                      → Pooled   (R²=0.792)  [DEXA:0.782  Pooled:0.792  Retina:0.763]
+   BMI                                      → DEXA     (R²=0.915)  [DEXA:0.915  Pooled:0.808  Retina:0.148]
+
+DEXA SPECIFIC:
+--------------------------------------------------------------------------------
+embedding_type                    DEXA  Pooled  Retina
+outcome                                               
+Subcutaneous Adipose Tissue Mass 0.043   0.011  -0.110
+Total Lean Mass                  0.846   0.771   0.420
+Visceral Adipose Tissue Mass     0.077   0.048  -0.087
+Weight                           0.821   0.710   0.213
+
+Best embedding per outcome:
+   Subcutaneous Adipose Tissue Mass         → DEXA     (R²=0.043)  [DEXA:0.043  Pooled:0.011  Retina:-0.110]
+   Total Lean Mass                          → DEXA     (R²=0.846)  [DEXA:0.846  Pooled:0.771  Retina:0.420]
+   Visceral Adipose Tissue Mass             → DEXA     (R²=0.077)  [DEXA:0.077  Pooled:0.048  Retina:-0.087]
+   Weight                                   → DEXA     (R²=0.821)  [DEXA:0.821  Pooled:0.710  Retina:0.213]
+
+RETINA SPECIFIC:
+--------------------------------------------------------------------------------
+embedding_type              DEXA  Pooled  Retina
+outcome                                         
+Artery Tortuosity         -0.178  -0.042  -0.065
+Cup-to-Disc Ratio         -0.656  -0.165  -0.320
+Retinal Artery Width      -0.087   0.286   0.312
+Retinal Fractal Dimension -0.086   0.288   0.484
+Retinal Vein Width        -0.115   0.164   0.210
+
+Best embedding per outcome:
+   Artery Tortuosity                        → Pooled   (R²=-0.042)  [DEXA:-0.178  Pooled:-0.042  Retina:-0.065]
+   Cup-to-Disc Ratio                        → Pooled   (R²=-0.165)  [DEXA:-0.656  Pooled:-0.165  Retina:-0.320]
+   Retinal Artery Width                     → Retina   (R²=0.312)  [DEXA:-0.087  Pooled:0.286  Retina:0.312]
+   Retinal Fractal Dimension                → Retina   (R²=0.484)  [DEXA:-0.086  Pooled:0.288  Retina:0.484]
+   Retinal Vein Width                       → Retina   (R²=0.210)  [DEXA:-0.115  Pooled:0.164  Retina:0.210]
+
+CROSS MODAL:
+--------------------------------------------------------------------------------
+embedding_type           DEXA  Pooled  Retina
+outcome                                      
+Glucose                -0.119   0.053  -0.073
+HbA1c                  -0.399  -0.049  -0.275
+White Blood Cell Count  0.024   0.036  -0.074
+
+Best embedding per outcome:
+   Glucose                                  → Pooled   (R²=0.053)  [DEXA:-0.119  Pooled:0.053  Retina:-0.073]
+   HbA1c                                    → Pooled   (R²=-0.049)  [DEXA:-0.399  Pooled:-0.049  Retina:-0.275]
+   White Blood Cell Count                   → Pooled   (R²=0.036)  [DEXA:0.024  Pooled:0.036  Retina:-0.074]
+
+================================================================================
+HYPOTHESIS TESTING COMPLETE
+================================================================================

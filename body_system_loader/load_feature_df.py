@@ -30,7 +30,35 @@ JAFAR_BASE = os.getenv('JAFAR_BASE')
 
 # Paths for main and temp description files
 _MAIN_DESC_PATH = os.path.join(BODY_SYSTEMS, "body_systems_description", 'dataset_columns.json')
-_TEMP_DESC_PATH = os.path.join(BODY_SYSTEMS, "body_systems_description", 'temp_dataset_columns.json')
+
+# Unique temp file per process - avoids race conditions when running multiple queue jobs
+_TEMP_DESC_PATH = None  # Set via init_temp_session()
+
+def init_temp_session(session_id: str = None):
+    """Initialize a unique temp session. Call once at start of each independent run."""
+    global _TEMP_DESC_PATH
+    if session_id is None:
+        session_id = f"{os.getpid()}_{int(time.time() * 1000)}"
+    _TEMP_DESC_PATH = os.path.join(
+        BODY_SYSTEMS, "body_systems_description", f'temp_dataset_columns_{session_id}.json'
+    )
+    # Start fresh
+    _atomic_json_write(_TEMP_DESC_PATH, {})
+    return _TEMP_DESC_PATH
+
+def get_temp_desc_path():
+    """Get current temp path, auto-initializing if needed."""
+    global _TEMP_DESC_PATH
+    if _TEMP_DESC_PATH is None:
+        init_temp_session()
+    return _TEMP_DESC_PATH
+
+def cleanup_temp_session():
+    """Remove current session's temp file. Optional cleanup at end of run."""
+    global _TEMP_DESC_PATH
+    if _TEMP_DESC_PATH and os.path.exists(_TEMP_DESC_PATH):
+        os.remove(_TEMP_DESC_PATH)
+    _TEMP_DESC_PATH = None
 
 
 def load_dataset_filenames_dict() -> dict:
@@ -83,7 +111,7 @@ def prepare_column_json():
 	with open(os.path.join(BODY_SYSTEMS, "body_systems_description", 'column_descriptions.json'), 'w') as f:
 		json.dump(column_descriptions, f)
 
-def add_body_system_csv(csv_file: str, system: str, temp: bool = True, column_types: dict = None) -> None:
+def add_body_system_csv(csv_file: str, system: str, temp: bool = True, column_types: dict = None, temp_path: str = None) -> None:
 	"""
 	Add a csv file to body systems description. Only reads header row for speed.
 	Uses temp file by default to avoid polluting main config.
@@ -118,12 +146,12 @@ def add_body_system_csv(csv_file: str, system: str, temp: bool = True, column_ty
 			if col in columns_dict:
 				columns_dict[col]['type'] = col_type
 
-	target_path = _TEMP_DESC_PATH if temp else _MAIN_DESC_PATH
+	target_path = temp_path if temp_path is not None else (get_temp_desc_path() if temp else _MAIN_DESC_PATH)
 	systems_dict = _load_temp_description_json() if temp else _load_main_description_json()
 	systems_dict[system] = {'directory': csv_file, 'columns': columns_dict, 'temp': temp}
 	_atomic_json_write(target_path, systems_dict)
 
-def create_body_system_from_other_systems_csv(system: str, column_names: list[str]) -> pd.DataFrame:
+def create_body_system_from_other_systems_csv(system: str, column_names: list[str], temp_path: str = None) -> pd.DataFrame:
 	"""Create a temp body system CSV from columns in other systems.
 	Raises error if system name already exists in main config.
 	"""
@@ -136,18 +164,18 @@ def create_body_system_from_other_systems_csv(system: str, column_names: list[st
 	_log("create_body_system LOADED", {"system": system, "df_shape": list(df.shape), "df_cols": list(df.columns)}, "H1,H2")
 	# #endregion
 	df.to_csv(os.path.join(TEMP_SYSTEMS, f'{system}.csv'))
-	add_body_system_csv(os.path.join(TEMP_SYSTEMS, f'{system}.csv'), system, temp=True)
+	add_body_system_csv(os.path.join(TEMP_SYSTEMS, f'{system}.csv'), system, temp=True, temp_path=temp_path)
 
 def remove_body_system_csv(system: str) -> None:
 	"""Remove a body system from temp descriptions (not main)."""
 	temp_dict = _load_temp_description_json()
 	if system in temp_dict:
 		temp_dict.pop(system)
-		_atomic_json_write(_TEMP_DESC_PATH, temp_dict)
+		_atomic_json_write(get_temp_desc_path(), temp_dict)
 
-def clear_temp_systems() -> None:
-	"""Clear all temp systems - call at start of new run to reset."""
-	_atomic_json_write(_TEMP_DESC_PATH, {})
+def clear_temp_systems(session_id: str = None) -> None:
+	"""Initialize a fresh temp session. Each run gets its own isolated temp file."""
+	init_temp_session(session_id)
 
 def _load_main_description_json() -> dict:
 	"""Load the main (permanent) body systems description."""
@@ -156,19 +184,17 @@ def _load_main_description_json() -> dict:
 
 def _load_temp_description_json() -> dict:
 	"""Load temp body systems description, creating empty if doesn't exist."""
-	if not os.path.exists(_TEMP_DESC_PATH):
+	temp_path = get_temp_desc_path()
+	if not os.path.exists(temp_path):
 		return {}
-	with open(_TEMP_DESC_PATH, 'r') as f:
+	with open(temp_path, 'r') as f:
 		return json.load(f)
 
-def load_system_description_json(no_temp: bool = False) -> dict:
+def load_system_description_json() -> dict:
 	"""Load merged main + temp body systems descriptions."""
-	if no_temp:
-		return _load_main_description_json()
-	else:
-		main = _load_main_description_json()
-		temp = _load_temp_description_json()
-		return {**main, **temp}  # Temp overrides main if same name
+	main = _load_main_description_json()
+	temp = _load_temp_description_json()
+	return {**main, **temp}  # Temp overrides main if same name
 
 def get_body_system_column_names(system: str) -> list[str]:
 	"""

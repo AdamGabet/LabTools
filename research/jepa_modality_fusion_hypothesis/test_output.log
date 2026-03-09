@@ -1,0 +1,113 @@
+/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/sklearn/model_selection/_search.py:305: UserWarning: The total space of parameters 3 is smaller than n_iter=30. Running 3 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+================================================================================
+JEPA MODALITY FUSION HYPOTHESIS TESTING
+================================================================================
+
+[1/6] Loading embeddings...
+   DEXA: (11015, 768)
+   Retina: (9680, 768)
+   Pooled (deduplicated): (12937, 384)
+
+[2/6] Selecting outcomes across shared-specific spectrum...
+   Testing 12 outcomes across 4 categories
+
+[3/6] Loading outcome data...
+   Age/Gender/BMI: (24929, 3)
+   Body composition: (24929, 118)
+   Blood lipids: (6177, 3098)
+   Glycemic status: (23745, 48)
+
+[4/6] Preparing datasets...
+
+[5/6] Running cross-validation...
+
+   Category: SHARED
+
+   Testing: Age (age)
+      DEXA: n=10446 tuning params:  {'model__alpha': [0.1, 1.0, 10.0]}
+/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/sklearn/model_selection/_search.py:305: UserWarning: The total space of parameters 3 is smaller than n_iter=30. Running 3 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/sklearn/model_selection/_search.py:305: UserWarning: The total space of parameters 3 is smaller than n_iter=30. Running 3 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/sklearn/model_selection/_search.py:305: UserWarning: The total space of parameters 3 is smaller than n_iter=30. Running 3 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/sklearn/model_selection/_search.py:305: UserWarning: The total space of parameters 3 is smaller than n_iter=30. Running 3 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/sklearn/model_selection/_search.py:305: UserWarning: The total space of parameters 3 is smaller than n_iter=30. Running 3 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+      DEXA: ERROR - 'Column not found: gender'
+      Retina: n=9605 tuning params:  {'model__alpha': [0.1, 1.0, 10.0]}
+      Retina: ERROR - 'Column not found: gender'
+      Pooled: n=12515 tuning params:  {'model__alpha': [0.1, 1.0, 10.0]}
+      Pooled: ERROR - 'Column not found: gender'
+
+   Testing: BMI (bmi)
+      DEXA: n=10419 tuning params:  {'model__alpha': [0.1, 1.0, 10.0]}
+      DEXA: ERROR - 'Column not found: gender'
+      Retina: n=9585 tuning params:  {'model__alpha': [0.1, 1.0, 10.0]}
+      Retina: ERROR - 'Column not found: gender'
+      Pooled: n=12481 tuning params:  {'model__alpha': [0.1, 1.0, 10.0]}
+      Pooled: ERROR - 'Column not found: gender'
+
+   Category: DEXA_SPECIFIC
+
+   Testing: Bone Mineral Density (total_bone_mineral_density)
+      ⚠ Outcome not found, skipping
+
+   Testing: Visceral Adipose Tissue (visceral_adipose_tissue_mass)
+      ⚠ Outcome not found, skipping
+
+   Testing: Total Lean Mass (total_lean_mass)
+      ⚠ Outcome not found, skipping
+
+   Testing: Body Fat Percentage (body_fat_percentage)
+      ⚠ Outcome not found, skipping
+
+   Category: RETINA_SPECIFIC
+
+   Category: CROSS_MODAL
+
+   Testing: HbA1c (hba1c)
+      ⚠ Outcome not found, skipping
+
+   Testing: Glucose (glucose_fasting)
+      ⚠ Outcome not found, skipping
+
+   Testing: Triglycerides (triglycerides)
+      ⚠ Outcome not found, skipping
+
+   Testing: HDL Cholesterol (hdl_cholesterol)
+      ⚠ Outcome not found, skipping
+
+   Testing: LDL Cholesterol (ldl_cholesterol)
+      ⚠ Outcome not found, skipping
+
+   Testing: C-Reactive Protein (c_reactive_protein)
+      ⚠ Outcome not found, skipping
+
+[6/6] Saving results...
+   Saved to: /home/adamgab/PycharmProjects/LabTools/research/jepa_modality_fusion_hypothesis/hypothesis_test_results.csv
+
+================================================================================
+RESULTS SUMMARY
+================================================================================
+Traceback (most recent call last):
+  File "/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'category'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adamgab/PycharmProjects/LabTools/research/jepa_modality_fusion_hypothesis/test_hypothesis.py", line 243, in <module>
+    cat_results = results_df[results_df['category'] == category]
+  File "/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/pandas/core/frame.py", line 3807, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/adamgab/miniconda3/envs/NewtonModels/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'category'

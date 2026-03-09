@@ -1,8 +1,13 @@
 {
+  "enabledMcpjsonServers": [
+    "secure-api"
+  ],
   "permissions": {
     "allow": [
-      "WebSearch",
-      "WebFetch(domain:www.who.int)"
+      "Bash(source:*)",
+      "Bash(conda activate:*)",
+      "Bash(export PYTHONPATH=/home/adamgab/PycharmProjects/LabTools:*)",
+      "Bash(python:*)"
     ]
   }
 }

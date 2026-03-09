@@ -1,0 +1,83 @@
+================================================================================
+COMPREHENSIVE JEPA HYPOTHESIS TESTING
+================================================================================
+
+[1/5] Loading embeddings...
+   DEXA: (11015, 768)
+   Retina: (9680, 768)
+   Pooled: (12937, 384)
+
+[2/5] Loading expanded outcome set...
+   Loaded 10 body systems
+   Testing 61 outcomes across 4 categories
+
+[4/5] Running comprehensive cross-validation...
+
+======================================================================
+SHARED
+======================================================================
+
+Tested 0/61 outcomes...
+
+======================================================================
+DEXA SPECIFIC
+======================================================================
+
+Tested 15/61 outcomes...
+
+Tested 30/61 outcomes...
+
+Tested 45/61 outcomes...
+
+======================================================================
+RETINA SPECIFIC
+======================================================================
+
+Tested 60/61 outcomes...
+
+Tested 75/61 outcomes...
+
+Tested 90/61 outcomes...
+
+======================================================================
+CROSS MODAL
+======================================================================
+
+Tested 105/61 outcomes...
+
+Tested 120/61 outcomes...
+
+Completed 132 total tests!
+
+[5/5] Saving comprehensive results...
+   Saved to: /home/adamgab/PycharmProjects/LabTools/research/jepa_modality_fusion_hypothesis/comprehensive_results.csv
+   Total successful tests: 132
+   Outcomes tested: 44
+
+================================================================================
+QUICK SUMMARY
+================================================================================
+
+SHARED:
+   Best by R²: {'Pooled': 1, 'DEXA': 1}
+   Best by Spearman: {'Pooled': 1, 'DEXA': 1}
+   Best by Pearson: {'Pooled': 1, 'DEXA': 1}
+
+DEXA SPECIFIC:
+   Best by R²: {'DEXA': 14}
+   Best by Spearman: {'DEXA': 13, 'Retina': 1}
+   Best by Pearson: {'DEXA': 14}
+
+RETINA SPECIFIC:
+   Best by R²: {'Pooled': 10, 'Retina': 7}
+   Best by Spearman: {'Retina': 14, 'DEXA': 2, 'Pooled': 1}
+   Best by Pearson: {'Retina': 13, 'DEXA': 2, 'Pooled': 2}
+
+CROSS MODAL:
+   Best by R²: {'Pooled': 11}
+   Best by Spearman: {'Pooled': 7, 'Retina': 2, 'DEXA': 2}
+   Best by Pearson: {'Pooled': 6, 'DEXA': 3, 'Retina': 2}
+
+================================================================================
+COMPREHENSIVE TESTING COMPLETE
+================================================================================
