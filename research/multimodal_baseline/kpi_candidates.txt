@@ -1,0 +1,66 @@
+=== CGM KPIs ===
+  iglu_gmi: n=10801, mean=5.610, std=0.279, nan%=55.4%
+  iglu_in_range_70_180: n=10801, mean=94.700, std=9.646, nan%=55.4%
+  bt__hba1c: n=11999, mean=1.300, std=2.321, nan%=50.4%
+
+=== DEXA KPIs ===
+  total_scan_vat_mass (body_composition): n=19522, mean=3.310, std=12.679, nan%=21.7%
+  total_scan_vat_area (body_composition): n=19522, mean=101.309, std=73.220, nan%=21.7%
+  body_total_bmd (bone_density): n=19799, mean=1.198, std=0.134, nan%=0.0%
+  femur_neck_mean_bmd (bone_density): n=19181, mean=0.926, std=0.132, nan%=3.1%
+  spine_l1_l4_bmd (bone_density): n=17170, mean=1.152, std=0.169, nan%=13.3%
+
+=== Retina KPI candidates (cardiovascular proxies) ===
+  sitting_blood_pressure_systolic: n=24855, mean=119.604, std=16.888, nan%=0.2%
+  lying_blood_pressure_systolic: n=15827, mean=119.404, std=15.027, nan%=36.5%
+  intima_media_th_mm_1_intima_media_thickness: n=20183, mean=0.590, std=0.116, nan%=19.0%
+  intima_media_th_mm_2_intima_media_thickness: n=10269, mean=0.601, std=0.119, nan%=58.8%
+
+=== Metabolites KPI candidates ===
+Total metabolites: 133, total rows: 13376
+Visits: {'baseline': 9231, '02_00_visit': 3438, '04_00_visit': 707}
+
+Top 20 most variable metabolites (n>1000):
+                                              metabolite     n  nan_pct        cv        mean
+                               Acetaminophen glucuronide 13376      0.0 10.950660   39.035926
+                                               Valsartan 13376      0.0  6.774067  563.085379
+                                     Urolithin-3-sulfate 13376      0.0  6.436325   22.651833
+                                   Urolithin a 3-sulfate 13376      0.0  5.454694   51.136840
+                                                C20H26O7 13376      0.0  4.667087   38.521880
+                            Dihydronaringenin-O-sulphate 13376      0.0  4.504177  195.819152
+                    Medicarpin 3-O-(6'-malonylglucoside) 13376      0.0  4.351331  204.164506
+                                                C20H26O8 13376      0.0  3.959744   37.516805
+2H-1-Benzopyran-2-one 7-(sulfooxy)- (7-Sulfooxycoumarin) 13376      0.0  3.725079   88.243984
+              Sonchuside C_Abscisic alcohol 11-glucoside 13376      0.0  3.585141   13.862141
+                         Cholic acid glucuronide(isomer) 13376      0.0  3.562249   40.453052
+                                              acesulfame 13376      0.0  3.469852  104.896238
+             4-Ethylphenylsulfate_3-Ethylphenylsulfate.1 13376      0.0  2.978011 1769.895319
+                                          Thymol Sulfate 13376      0.0  2.917591 3537.594977
+                               Cholic acid glucuronide.1 13376      0.0  2.862920   57.149942
+                                      Enterodiol sulfate 13376      0.0  2.824899   54.915525
+                      4-Hydroxyphenylacetic acid sulfate 13376      0.0  2.795436  299.487783
+ Urolithin A-3-O-glucuronide_Urolithin A-8-O-glucuronide 13376      0.0  2.718664  117.210042
+                                  Enterodiol glucuronide 13376      0.0  2.717828  273.864540
+               4-Ethylphenylsulfate_3-Ethylphenylsulfate 13376      0.0  2.652666    6.296073
+
+Known clinical metabolites found:
+  urate: n=13376, nan%=0.0%
+  N-Hydroxy-L-tryptophan: n=13376, nan%=0.0%
+  Tryptophan: n=13376, nan%=0.0%
+  Phenylacetylglutamine: n=13376, nan%=0.0%
+  indolelactate_3-Indolehydracrylic acid: n=13376, nan%=0.0%
+  Monomenthyl succinate_5-Nonyltetrahydro-2-oxo-3-furancarboxylic acid_(6R 8Z)-6-Hydroxy-3-oxotetradecenoic acid.1: n=13376, nan%=0.0%
+  Monomenthyl succinate_5-Nonyltetrahydro-2-oxo-3-furancarboxylic acid_(6R 8Z)-6-Hydroxy-3-oxotetradecenoic acid: n=13376, nan%=0.0%
+  Phenylalanylphenylalanine: n=13376, nan%=0.0%
+  Phenylalanylphenylalanine: n=13376, nan%=0.0%
+  gamma-glutamylleucine: n=13376, nan%=0.0%
+  Phenylalanylthreonine: n=13376, nan%=0.0%
+  Indoleacrylic acid: n=13376, nan%=0.0%
+  3-indoxyl sulfate_7-Hydroxyindole sulfate_6-Hydroxyindole sulfate: n=13376, nan%=0.0%
+
+=== Final multi-visit cohort size ===
+Subjects with multi-visit DEXA + multi-visit Metabolites + CGM + Retina: 1198
+Subjects with multi-visit DEXA + Metabolites(any) + CGM + Retina: 1559
+Visit count distribution: {2: 1498, 3: 60, 4: 1}
+Has baseline: 376
+Has 02_00_visit: 1018

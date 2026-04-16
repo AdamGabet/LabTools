@@ -1,0 +1,732 @@
+{
+  "systems_summary": {
+    "Age_Gender_BMI": {
+      "total": 3,
+      "regression": 2,
+      "binary_classification": 1,
+      "multi_categorical": 0
+    },
+    "blood_lipids": {
+      "total": 3098,
+      "regression": 3065,
+      "binary_classification": 0,
+      "multi_categorical": 33
+    },
+    "blood_tests_lipids": {
+      "total": 4,
+      "regression": 4,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "body_composition": {
+      "total": 118,
+      "regression": 118,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "bone_density": {
+      "total": 182,
+      "regression": 182,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "cardiovascular_system": {
+      "total": 167,
+      "regression": 166,
+      "binary_classification": 0,
+      "multi_categorical": 1
+    },
+    "diet": {
+      "total": 311,
+      "regression": 309,
+      "binary_classification": 0,
+      "multi_categorical": 2
+    },
+    "diet_questions": {
+      "total": 158,
+      "regression": 0,
+      "binary_classification": 5,
+      "multi_categorical": 0
+    },
+    "exercise_logging": {
+      "total": 16,
+      "regression": 16,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "frailty": {
+      "total": 7,
+      "regression": 7,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "gait": {
+      "total": 152,
+      "regression": 152,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "glycemic_status": {
+      "total": 48,
+      "regression": 48,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "hematopoietic": {
+      "total": 8,
+      "regression": 8,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "high_level_diet": {
+      "total": 125,
+      "regression": 125,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "immune_system": {
+      "total": 11,
+      "regression": 11,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "lifestyle": {
+      "total": 161,
+      "regression": 19,
+      "binary_classification": 142,
+      "multi_categorical": 0
+    },
+    "liver": {
+      "total": 11,
+      "regression": 11,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "medical_conditions": {
+      "total": 79,
+      "regression": 0,
+      "binary_classification": 79,
+      "multi_categorical": 0
+    },
+    "medications": {
+      "total": 49,
+      "regression": 0,
+      "binary_classification": 48,
+      "multi_categorical": 1
+    },
+    "mental": {
+      "total": 31,
+      "regression": 3,
+      "binary_classification": 18,
+      "multi_categorical": 0
+    },
+    "microbiome": {
+      "total": 516,
+      "regression": 516,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "proteomics": {
+      "total": 1034,
+      "regression": 1034,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "nightingale": {
+      "total": 167,
+      "regression": 167,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "renal_function": {
+      "total": 4,
+      "regression": 4,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "sleep": {
+      "total": 127,
+      "regression": 126,
+      "binary_classification": 0,
+      "multi_categorical": 1
+    },
+    "high_level_diet_with_stage": {
+      "total": 92,
+      "regression": 92,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "study_type": {
+      "total": 2,
+      "regression": 0,
+      "binary_classification": 0,
+      "multi_categorical": 2
+    },
+    "family_medical_conditions": {
+      "total": 48,
+      "regression": 0,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "family_history": {
+      "total": 13,
+      "regression": 4,
+      "binary_classification": 5,
+      "multi_categorical": 4
+    },
+    "metabolites_annotated": {
+      "total": 133,
+      "regression": 133,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    },
+    "metabolites_unannotated": {
+      "total": 1810,
+      "regression": 1810,
+      "binary_classification": 0,
+      "multi_categorical": 0
+    }
+  },
+  "overlap_counts": {
+    "microbiome+sleep+retina": 9656,
+    "microbiome+sleep+retina+ultrasound+nightingale": 7811,
+    "microbiome+sleep+retina (>=3 dates each)": 773,
+    "microbiome+sleep+retina+ultrasound+nightingale (>=3 dates each)": 33
+  },
+  "candidate_kpis": {
+    "microbiome": [
+      {
+        "column": "Rep_231",
+        "non_null_n": 22670,
+        "non_null_pct": 100.0,
+        "std": 1.4333,
+        "cv": 0.485,
+        "term_boost": 0,
+        "stage_counts": {
+          "baseline": 12378,
+          "02_00_visit": 6391,
+          "04_00_visit": 3203,
+          "06_00_visit": 698
+        }
+      },
+      {
+        "column": "Rep_3541",
+        "non_null_n": 22670,
+        "non_null_pct": 100.0,
+        "std": 1.0707,
+        "cv": 0.3207,
+        "term_boost": 0,
+        "stage_counts": {
+          "baseline": 12378,
+          "02_00_visit": 6391,
+          "04_00_visit": 3203,
+          "06_00_visit": 698
+        }
+      },
+      {
+        "column": "Rep_467",
+        "non_null_n": 22670,
+        "non_null_pct": 100.0,
+        "std": 1.0627,
+        "cv": 0.3699,
+        "term_boost": 0,
+        "stage_counts": {
+          "baseline": 12378,
+          "02_00_visit": 6391,
+          "04_00_visit": 3203,
+          "06_00_visit": 698
+        }
+      },
+      {
+        "column": "Rep_450",
+        "non_null_n": 22670,
+        "non_null_pct": 100.0,
+        "std": 1.061,
+        "cv": 0.3803,
+        "term_boost": 0,
+        "stage_counts": {
+          "baseline": 12378,
+          "02_00_visit": 6391,
+          "04_00_visit": 3203,
+          "06_00_visit": 698
+        }
+      },
+      {
+        "column": "Rep_3229",
+        "non_null_n": 22670,
+        "non_null_pct": 100.0,
+        "std": 1.0467,
+        "cv": 0.3648,
+        "term_boost": 0,
+        "stage_counts": {
+          "baseline": 12378,
+          "02_00_visit": 6391,
+          "04_00_visit": 3203,
+          "06_00_visit": 698
+        }
+      },
+      {
+        "column": "Rep_3012",
+        "non_null_n": 22670,
+        "non_null_pct": 100.0,
+        "std": 0.98,
+        "cv": 0.3461,
+        "term_boost": 0,
+        "stage_counts": {
+          "baseline": 12378,
+          "02_00_visit": 6391,
+          "04_00_visit": 3203,
+          "06_00_visit": 698
+        }
+      }
+    ],
+    "sleep": [
+      {
+        "column": "total_valid_apnea_sleep_time",
+        "non_null_n": 17941,
+        "non_null_pct": 99.6,
+        "std": 5251.7983,
+        "cv": 0.2602,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 10106,
+          "02_00_visit": 5616,
+          "04_00_visit": 2187,
+          "06_00_visit": 101
+        }
+      },
+      {
+        "column": "total_arousal_sleep_time",
+        "non_null_n": 17941,
+        "non_null_pct": 99.6,
+        "std": 4404.5527,
+        "cv": 0.2065,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 10106,
+          "02_00_visit": 5616,
+          "04_00_visit": 2187,
+          "06_00_visit": 101
+        }
+      },
+      {
+        "column": "total_valid_arrhythmia_sleep_time",
+        "non_null_n": 17941,
+        "non_null_pct": 99.6,
+        "std": 4328.591,
+        "cv": 0.2014,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 10106,
+          "02_00_visit": 5616,
+          "04_00_visit": 2187,
+          "06_00_visit": 101
+        }
+      },
+      {
+        "column": "total_sleep_time",
+        "non_null_n": 17941,
+        "non_null_pct": 99.6,
+        "std": 4323.8404,
+        "cv": 0.2005,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 10106,
+          "02_00_visit": 5616,
+          "04_00_visit": 2187,
+          "06_00_visit": 101
+        }
+      },
+      {
+        "column": "total_light_sleep_time",
+        "non_null_n": 17941,
+        "non_null_pct": 99.6,
+        "std": 3504.2207,
+        "cv": 0.281,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 10106,
+          "02_00_visit": 5616,
+          "04_00_visit": 2187,
+          "06_00_visit": 101
+        }
+      },
+      {
+        "column": "total_rem_sleep_time",
+        "non_null_n": 17941,
+        "non_null_pct": 99.6,
+        "std": 1804.5207,
+        "cv": 0.3565,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 10106,
+          "02_00_visit": 5616,
+          "04_00_visit": 2187,
+          "06_00_visit": 101
+        }
+      }
+    ],
+    "retina_proxy": [
+      {
+        "column": "automorph_vein_average_width",
+        "non_null_n": 13093,
+        "non_null_pct": 52.5,
+        "std": 1403.8356,
+        "cv": 0.0717,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "automorph_artery_average_width",
+        "non_null_n": 13093,
+        "non_null_pct": 52.5,
+        "std": 1397.1927,
+        "cv": 0.0759,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "automorph_average_width",
+        "non_null_n": 13093,
+        "non_null_pct": 52.5,
+        "std": 1101.25,
+        "cv": 0.0655,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "automorph_artery_squared_curvature_tortuosity",
+        "non_null_n": 13093,
+        "non_null_pct": 52.5,
+        "std": 18.8614,
+        "cv": 0.8669,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "automorph_vein_squared_curvature_tortuosity",
+        "non_null_n": 13093,
+        "non_null_pct": 52.5,
+        "std": 8.6209,
+        "cv": 0.6916,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "automorph_squared_curvature_tortuosity",
+        "non_null_n": 13093,
+        "non_null_pct": 52.5,
+        "std": 6.5429,
+        "cv": 0.5397,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      }
+    ],
+    "ultrasound_proxy": [
+      {
+        "column": "r_abi",
+        "non_null_n": 22785,
+        "non_null_pct": 91.4,
+        "std": 0.1394,
+        "cv": 0.1247,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "l_abi",
+        "non_null_n": 22784,
+        "non_null_pct": 91.4,
+        "std": 0.134,
+        "cv": 0.1201,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "intima_media_th_mm_1_intima_media_thickness",
+        "non_null_n": 20183,
+        "non_null_pct": 81.0,
+        "std": 0.1157,
+        "cv": 0.1961,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "intima_media_th_1_fit",
+        "non_null_n": 10317,
+        "non_null_pct": 41.4,
+        "std": 11.569,
+        "cv": 0.1308,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "intima_media_th_mm_1_window_width",
+        "non_null_n": 10317,
+        "non_null_pct": 41.4,
+        "std": 0.0825,
+        "cv": 0.0082,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      },
+      {
+        "column": "intima_media_th_2_fit",
+        "non_null_n": 10269,
+        "non_null_pct": 41.2,
+        "std": 11.2238,
+        "cv": 0.1262,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 13479,
+          "02_00_visit": 7221,
+          "04_00_visit": 3543,
+          "06_00_visit": 673
+        }
+      }
+    ],
+    "nightingale": [
+      {
+        "column": "GlycA",
+        "non_null_n": 7834,
+        "non_null_pct": 100.0,
+        "std": 0.1264,
+        "cv": 0.1521,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 6507,
+          "02_00_visit": 1327
+        }
+      },
+      {
+        "column": "VLDL_size",
+        "non_null_n": 7833,
+        "non_null_pct": 100.0,
+        "std": 1.31,
+        "cv": 0.0337,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 6507,
+          "02_00_visit": 1327
+        }
+      },
+      {
+        "column": "non_HDL_C",
+        "non_null_n": 7833,
+        "non_null_pct": 100.0,
+        "std": 0.7574,
+        "cv": 0.2409,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 6507,
+          "02_00_visit": 1327
+        }
+      },
+      {
+        "column": "VLDL_L",
+        "non_null_n": 7833,
+        "non_null_pct": 100.0,
+        "std": 0.7373,
+        "cv": 0.4061,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 6507,
+          "02_00_visit": 1327
+        }
+      },
+      {
+        "column": "Clinical_LDL_C",
+        "non_null_n": 7833,
+        "non_null_pct": 100.0,
+        "std": 0.6697,
+        "cv": 0.2617,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 6507,
+          "02_00_visit": 1327
+        }
+      },
+      {
+        "column": "HDL_L",
+        "non_null_n": 7833,
+        "non_null_pct": 100.0,
+        "std": 0.5804,
+        "cv": 0.213,
+        "term_boost": 1,
+        "stage_counts": {
+          "baseline": 6507,
+          "02_00_visit": 1327
+        }
+      }
+    ]
+  },
+  "chosen_top2_kpis": {
+    "microbiome": [
+      "Rep_231",
+      "Rep_3541"
+    ],
+    "sleep": [
+      "total_valid_apnea_sleep_time",
+      "total_arousal_sleep_time"
+    ],
+    "retina_proxy": [
+      "automorph_vein_average_width",
+      "automorph_artery_average_width"
+    ],
+    "ultrasound_proxy": [
+      "r_abi",
+      "l_abi"
+    ],
+    "nightingale": [
+      "GlycA",
+      "VLDL_size"
+    ]
+  },
+  "top2_visit_coverage": {
+    "microbiome": {
+      "baseline": {
+        "subjects_any": 12378,
+        "subjects_all_cols": 12378
+      },
+      "02_00_visit": {
+        "subjects_any": 6391,
+        "subjects_all_cols": 6391
+      },
+      "04_00_visit": {
+        "subjects_any": 3203,
+        "subjects_all_cols": 3203
+      }
+    },
+    "sleep": {
+      "baseline": {
+        "subjects_any": 10065,
+        "subjects_all_cols": 10065
+      },
+      "02_00_visit": {
+        "subjects_any": 5595,
+        "subjects_all_cols": 5595
+      },
+      "04_00_visit": {
+        "subjects_any": 2180,
+        "subjects_all_cols": 2180
+      }
+    },
+    "retina_proxy": {
+      "baseline": {
+        "subjects_any": 6911,
+        "subjects_all_cols": 6911
+      },
+      "02_00_visit": {
+        "subjects_any": 4710,
+        "subjects_all_cols": 4710
+      },
+      "04_00_visit": {
+        "subjects_any": 1459,
+        "subjects_all_cols": 1459
+      }
+    },
+    "ultrasound_proxy": {
+      "baseline": {
+        "subjects_any": 11921,
+        "subjects_all_cols": 11910
+      },
+      "02_00_visit": {
+        "subjects_any": 7027,
+        "subjects_all_cols": 7023
+      },
+      "04_00_visit": {
+        "subjects_any": 3300,
+        "subjects_all_cols": 3300
+      }
+    },
+    "nightingale": {
+      "baseline": {
+        "subjects_any": 6507,
+        "subjects_all_cols": 6506
+      },
+      "02_00_visit": {
+        "subjects_any": 1327,
+        "subjects_all_cols": 1327
+      },
+      "04_00_visit": {
+        "subjects_any": 0,
+        "subjects_all_cols": 0
+      }
+    }
+  },
+  "three_visit_feasibility": {
+    "bench1_3mod": {
+      "modalities": [
+        "microbiome",
+        "sleep",
+        "retina_proxy"
+      ],
+      "subjects_3visits_strict": 6,
+      "subjects_3visits_allow_1_missing_modality": 903
+    },
+    "bench2_5mod": {
+      "modalities": [
+        "microbiome",
+        "sleep",
+        "retina_proxy",
+        "ultrasound_proxy",
+        "nightingale"
+      ],
+      "subjects_3visits_strict": 0,
+      "subjects_3visits_allow_1_missing_modality": 246
+    }
+  }
+}

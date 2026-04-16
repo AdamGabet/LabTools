@@ -1,13 +1,44 @@
 {
-  "enabledMcpjsonServers": [
-    "secure-api"
-  ],
   "permissions": {
     "allow": [
-      "Bash(source:*)",
-      "Bash(conda activate:*)",
-      "Bash(export PYTHONPATH=/home/adamgab/PycharmProjects/LabTools:*)",
-      "Bash(python:*)"
+      "Bash(python *)",
+      "Bash(uv *)",
+      "Bash(pip *)",
+      "Bash(jupyter *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(mkdir *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Read(**)",
+      "Write(**)",
+      "Edit(**)",
+      "MultiEdit(**)",
+      "Glob(**)",
+      "Grep(**)",
+      "NotebookRead(**)",
+      "NotebookEdit(**)",
+      "WebFetch(*)",
+      "TodoRead",
+      "TodoWrite",
+      "Bash(PYTHONPATH=/home/adamgab/PycharmProjects/LabTools python /tmp/explore_retina.py 2>&1)",
+      "Bash(PYTHONPATH=/home/adamgab/PycharmProjects/LabTools python *)",
+      "Bash(PYTHONPATH=. python research/multimodal_baseline/01_explore_modalities.py 2>&1)"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(sudo *)",
+      "Bash(chmod *)",
+      "Bash(curl *)",
+      "Bash(wget *)"
     ]
+  },
+  "skills": {
+    "hpp": {
+      "description": "HPP/10K dataset research skill - data loading, cross-validation, biomarker analysis",
+      "path": ".claude/hpp-research.md"
+    }
   }
 }

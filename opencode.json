@@ -1,0 +1,143 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": "ask",
+  "instructions": [
+    "CLAUDE.md",
+    ".wolf/OPENWOLF.md"
+  ],
+  "agent": {
+    "labresearch": {
+      "description": "HPP research executor — runs analyses, writes research/<study>/, produces report.pdf",
+      "mode": "primary",
+      "model": "nebius/google/gemma-4-31B-it",
+      "maxTurns": 100,
+      "prompt": "{file:./.opencode/agents/labresearch.md}",
+      "permission": {
+        "read": {
+          "*": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny",
+          "*.env.example": "allow"
+        },
+        "list": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "edit": {
+          "*": "deny",
+          "research/**": "allow",
+          ".wolf/**": "allow"
+        },
+        "bash": {
+          "*": "deny",
+          "uv run python *": "allow",
+          "PYTHONPATH=* uv run python *": "allow",
+          "PYTHONPATH=* python3 *": "allow",
+          "env PYTHONPATH=* .venv/bin/python *": "allow",
+          "env PYTHONPATH=* python3 *": "allow",
+          "env PYTHONPATH=* uv run python *": "allow",
+          "export PYTHONPATH*": "allow",
+          "uv pip install *": "allow",
+          "uv pip list*": "allow",
+          "source .venv/bin/activate*": "allow",
+          ".venv/bin/python *": "allow",
+          "python3 *": "allow",
+          "ls*": "allow",
+          "head *": "allow",
+          "tail *": "allow",
+          "cat *": "allow",
+          "grep *": "allow",
+          "wc *": "allow",
+          "mkdir -p research/**": "allow",
+          "git status*": "allow",
+          "git diff*": "allow",
+          "git log*": "allow",
+          "git add research/**": "allow",
+          "git add .wolf/**": "allow",
+          "git commit -m *": "allow",
+          "git commit --message *": "allow",
+          "git rev-parse*": "allow",
+          "git branch --show-current": "allow",
+          ".venv/bin/python scripts/vision_bridge.py *": "allow",
+          "env PYTHONPATH=* .venv/bin/python scripts/vision_bridge.py *": "allow",
+          "uv run python scripts/vision_bridge.py *": "allow"
+        },
+        "webfetch": "allow",
+        "websearch": "deny",
+        "todowrite": "allow",
+        "todoread": "allow",
+        "task": "allow",
+        "skill": "deny"
+      }
+    },
+    "partner": {
+      "description": "Research web partner — fetches literature, methods, benchmarks; synthesises external context for HPP studies",
+      "model": "nebius/google/gemma-4-31B-it",
+      "prompt": "{file:./.opencode/agents/partner.md}",
+      "permission": {
+        "read": {
+          "*": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny",
+          "*.env.example": "allow"
+        },
+        "list": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "edit": {
+          "*": "deny",
+          "research/**/external_notes.md": "allow"
+        },
+        "bash": {
+          "*": "deny",
+          "ls*": "allow",
+          "head *": "allow",
+          "tail *": "allow",
+          "cat *": "allow",
+          "grep *": "allow",
+          "wc *": "allow"
+        },
+        "webfetch": "allow",
+        "websearch": "allow",
+        "todowrite": "deny",
+        "todoread": "allow",
+        "skill": "deny"
+      }
+    },
+    "planner": {
+      "description": "Research planner and critic — structures study plans, critiques designs for leakage/power/robustness",
+      "model": "nebius/google/gemma-4-31B-it",
+      "prompt": "{file:./.opencode/agents/planner.md}",
+      "permission": {
+        "read": {
+          "*": "allow",
+          "*.env": "deny",
+          "*.env.*": "deny",
+          "*.env.example": "allow"
+        },
+        "list": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "edit": {
+          "*": "deny",
+          "research/**/PLAN.md": "allow",
+          "research/**/journal.md": "allow",
+          "research/**/FINDINGS.md": "allow"
+        },
+        "bash": {
+          "*": "deny",
+          "ls*": "allow",
+          "head *": "allow",
+          "tail *": "allow",
+          "cat *": "allow",
+          "grep *": "allow",
+          "wc *": "allow"
+        },
+        "webfetch": "deny",
+        "websearch": "deny",
+        "todowrite": "allow",
+        "todoread": "allow",
+        "skill": "deny"
+      }
+    }
+  }
+}

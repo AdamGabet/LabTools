@@ -1,0 +1,19 @@
+#!/bin/bash
+# Launch isolated OpenCode research environment + PDF file server
+
+REPO=/home/adamgab/PycharmProjects/LabTools
+source "$REPO/.venv/bin/activate"
+export PYTHONPATH="$REPO"
+
+# Serve research/ folder so PDFs are reachable at http://127.0.0.1:8765/
+python3 -m http.server 8766 --directory "$REPO/research" &
+FILE_SERVER=$!
+trap "kill $FILE_SERVER 2>/dev/null" EXIT INT TERM
+
+echo "PDF server: http://127.0.0.1:8766/"
+echo "OpenCode:   http://127.0.0.1:4096/"
+echo "OpenCode login (HTTP Basic): username=lab  password=segal_lab123"
+
+export OPENCODE_SERVER_USERNAME=lab
+export OPENCODE_SERVER_PASSWORD=segal_lab123
+XDG_CONFIG_HOME=~/.config/opencode-research opencode web --port 4096

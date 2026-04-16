@@ -1,0 +1,41 @@
+=== CGM raw files ===
+Subjects with raw CGM files: 10989
+
+=== DEXA H5 images ===
+Subjects: 8820, rows: 11540
+Visits: {'02_00_visit': 4193, '04_00_visit': 3426, 'baseline': 2825, '06_00_visit': 893, '03_01_visit': 110, '05_01_visit': 48, '01_01_visit': 37, '00_01_visit': 6, '04_01_visit': 1, '06_02_visit': 1}
+
+=== Retina H5 images ===
+Subjects: 9677, rows: 9680
+
+=== Tabular KPI sources ===
+CGM tabular: 24192 rows
+Body composition: 24929 rows
+Bone density: 19799 rows
+Proteomics: 3675 rows
+
+=== 4-modality overlap (images as input + tabular KPIs) ===
+
+  baseline:
+    CGM-tab=13352, DEXA-img=2825, Retina-img=5982, Prot=3042, BodyComp-KPI=13491
+    All4 with DEXA image: 254
+    All4 with BodyComp KPI (not DEXA image req): 1518
+    All5 (img + cardio): 254
+
+  02_00_visit:
+    CGM-tab=6499, DEXA-img=4193, Retina-img=3322, Prot=559, BodyComp-KPI=7221
+    All4 with DEXA image: 94
+    All4 with BodyComp KPI (not DEXA image req): 384
+    All5 (img + cardio): 94
+
+  04_00_visit:
+    CGM-tab=3575, DEXA-img=3426, Retina-img=301, Prot=74, BodyComp-KPI=3544
+    All4 with DEXA image: 22
+    All4 with BodyComp KPI (not DEXA image req): 34
+    All5 (img + cardio): 22
+
+=== DEXA image multi-visit subjects ===
+2+ visits: 2638
+3+ visits: 81
+Multi-visit DEXA + CGM + Prot + Retina at any visit: 412
+Multi-visit DEXA + CGM + Prot (no retina): 500

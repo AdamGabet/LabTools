@@ -1,14 +1,37 @@
+# OpenWolf
+
+@.wolf/OPENWOLF.md
+
+This project uses OpenWolf for context management. Read and follow .wolf/OPENWOLF.md every session. Check .wolf/cerebrum.md before generating code. Check .wolf/anatomy.md before reading files.
+
+
 # LabTools - HPP Dataset Research
+
+## Bash Execution Rules
+
+- dont use `python -c "..."` for multi-line code — triggers security warnings.
+- When writing markdown/memory files that contain code fences, use Python `open()` instead of heredoc (avoids backtick warning).
+- With the repo venv activated, imports usually work without extra `PYTHONPATH`. If you must set it in one line (e.g. OpenCode’s shell is fish), use `env PYTHONPATH=/home/adamgab/PycharmProjects/LabTools .venv/bin/python ...` — not `PYTHONPATH=... python` (bash-only; fails as “Command not found” in fish).
+
+When doing research always use a folder inside the research directory and write all you code and results there.
+example: researching the multimodal baseline all code goes into research/multimodal_baseline
+
+When doing research, create a journal.md file so you can track your progress across compacting and sessions. 
+Always know which research you are working on and in which directory. If you are not sure ask me.
 
 ## Quick Start
 
 if you are working on secure_api we use uv.
-activate the venv with source .venv/bin/activate
+activate the venv with 
 
-Activate environment before any Python:
+source .venv/bin/activate
+
+If there is no venv create it
 ```bash
-source /home/adamgab/miniconda3/etc/profile.d/conda.sh && conda activate LinearQueue && export PYTHONPATH=/home/adamgab/PycharmProjects/LabTools
+uv venv && uv pip install -r requirements.txt
 ```
+
+(optional) add Eran Lab github repos to environment 
 
 ## Critical Rules
 
@@ -17,7 +40,7 @@ source /home/adamgab/miniconda3/etc/profile.d/conda.sh && conda activate LinearQ
 
 ```python
 # CORRECT
-from predict_and_eval.utils.ids_folds import ids_folds, create_cv_folds
+from predict_and_eval_clean.ids_folds import ids_folds
 id_folds = ids_folds(df_with_labels, seeds=range(10), n_splits=5)
 
 # WRONG - causes data leakage
@@ -62,8 +85,8 @@ from body_system_loader.biomarker_browser import BiomarkerBrowser
 
 ### Cross-Validation (`predict_and_eval/`)
 ```python
-from predict_and_eval.utils.ids_folds import ids_folds, id_fold_with_stratified_threshold
-from predict_and_eval.regression_seeding.Regressions import Regressions
+from predict_and_eval_clean.ids_folds import ids_folds
+from predict_and_eval_clean.Regressions import Regressions
 
 # Auto model selection between linear (LR_ridge/Logit) and tree (LGBM)
 regressions = Regressions()
@@ -75,10 +98,12 @@ eval_result = regressions.evaluate_predictions(X, y, result['predictions'])
 
 **The `.claude/` folder is for AI agents only** - it contains skills and patterns for conducting research.
 
+**A study is not done until `report.pdf` exists and reflects the latest results.**
+
 **For human-readable outputs, ALWAYS create:**
 1. **Research folder**: `research/<study_name>/`
-2. **Analysis code**: `analysis.py` - main reproducible analysis script
-3. **PDF report**: `report.pdf` - visual summary following `create-report` skill
+2. **PDF report**: `report.pdf` — THE primary deliverable; visual summary following `.claude/create-report.md`
+3. **Analysis code**: `analysis.py` - main reproducible analysis script
 4. **Findings doc**: `FINDINGS.md` - detailed explanations, limitations, interpretation
 
 ```
@@ -110,6 +135,21 @@ When creating new analysis capabilities:
 | Create Report | `.claude/create-report.md` | Guidelines for creating clean PDF reports with figures |
 | Cross-Sectional Study | `.claude/cross-sectional-association-study.md` | Pattern for exposure-outcome association studies with confound control |
 | HPP Data Insights | `.claude/hpp-data-insights.md` | Empirical observations about data distributions, validated associations, and unexpected findings |
+
+## OpenCode Agents
+
+This repo has an OpenCode agent ensemble (`opencode.json` + `.opencode/agents/`):
+
+| Agent | Role |
+|-------|------|
+| `labresearch` (primary) | Executes analyses; owns `.venv`; produces `report.pdf` |
+| `partner` | Web research — literature, methods, benchmarks; writes `external_notes.md` |
+| `planner` | Structures study plans; constructive critic for design/interpretation |
+
+**Runtime difference vs Claude Code / Cursor:**
+- **Claude Code / Cursor**: OpenWolf hooks run automatically (session-start, pre/post read-write, stop); `.wolf/memory.md` and `token-ledger.json` are updated by Node scripts.
+- **OpenCode**: Hooks are bridged via `.opencode/plugins/openwolf.mjs` — the plugin fires the same `node .wolf/hooks/*.js` scripts on session start/end and before/after each read/write tool call. The ledger and anatomy are updated automatically. Every **3 tool calls** it also rewrites `.wolf/.periodic_checklist.md` as a nudge (todos + memory + cerebrum). Agents should still manually append to `.wolf/memory.md` for high-level action summaries (the hooks track token-level detail; agents add semantic summaries).
+- **OpenCode + vision:** the UI may not send multimodal payloads to vLLM even if the server supports them. Use **`scripts/vision_bridge.py`** to POST `text + image_url` (data URIs) to `http://127.0.0.1:6767/v1` and paste the model output into chat.
 
 ## Available Body Systems
 Age_Gender_BMI, blood_lipids, body_composition, bone_density, cardiovascular_system,

@@ -1,0 +1,115 @@
+============================================================
+ACTUAL SIGNAL COVERAGE (raw data files)
+============================================================
+
+CGM raw txt files: 10989 subjects
+DEXA H5 images: 8820 subjects, 11540 subject-visits
+  Visits: {'02_00_visit': 4193, '04_00_visit': 3426, 'baseline': 2825, '06_00_visit': 893, '03_01_visit': 110, '05_01_visit': 48, '01_01_visit': 37, '00_01_visit': 6, '04_01_visit': 1, '06_02_visit': 1}
+Retina JEPA embeddings: 9677 subjects
+  Visits: {'baseline': 5982, '02_00_visit': 3322, '04_00_visit': 301, '03_01_visit': 40, '01_01_visit': 35}
+
+--- Core 3 modalities (CGM raw + DEXA H5 + Retina JEPA) ---
+Subjects with all 3: 6165
+Multi-visit DEXA + CGM + Retina: 2093
+
+============================================================
+4TH MODALITY CANDIDATES (multi-visit coverage)
+============================================================
+
+proteomics:
+  Total: 3143 subj | BL=3042 | 02=559 | 04=74
+  Multi-visit: 508 | Overlap with CGM+DEXA+Retina: 1348
+  Multi-visit overlap (CGM+DEXA+Retina+this): 158
+  N features: 1034
+
+nightingale:
+  Total: 7019 subj | BL=6507 | 02=1327 | 04=0
+  Multi-visit: 815 | Overlap with CGM+DEXA+Retina: 3721
+  Multi-visit overlap (CGM+DEXA+Retina+this): 230
+  N features: 167
+
+metabolites_annotated:
+  Total: 9337 subj | BL=9231 | 02=3438 | 04=707
+  Multi-visit: 3535 | Overlap with CGM+DEXA+Retina: 4349
+  Multi-visit overlap (CGM+DEXA+Retina+this): 1198
+  N features: 133
+
+blood_lipids:
+  Total: 6177 subj | BL=6177 | 02=0 | 04=0
+  Multi-visit: 0 | Overlap with CGM+DEXA+Retina: 3018
+  Multi-visit overlap (CGM+DEXA+Retina+this): 0
+  N features: 3098
+
+blood_tests_lipids:
+  Total: 13296 subj | BL=13059 | 02=6385 | 04=3400
+  Multi-visit: 7415 | Overlap with CGM+DEXA+Retina: 6154
+  Multi-visit overlap (CGM+DEXA+Retina+this): 2041
+  N features: 4
+
+hematopoietic:
+  Total: 13296 subj | BL=13059 | 02=6385 | 04=3400
+  Multi-visit: 7415 | Overlap with CGM+DEXA+Retina: 6154
+  Multi-visit overlap (CGM+DEXA+Retina+this): 2041
+  N features: 8
+
+immune_system:
+  Total: 13296 subj | BL=13059 | 02=6385 | 04=3400
+  Multi-visit: 7415 | Overlap with CGM+DEXA+Retina: 6154
+  Multi-visit overlap (CGM+DEXA+Retina+this): 2041
+  N features: 11
+
+microbiome:
+  Total: 12713 subj | BL=12364 | 02=6337 | 04=3110
+  Multi-visit: 6869 | Overlap with CGM+DEXA+Retina: 6083
+  Multi-visit overlap (CGM+DEXA+Retina+this): 1949
+  N features: 516
+
+rna: ERROR - 'rna'
+
+renal_function:
+  Total: 13296 subj | BL=13059 | 02=6385 | 04=3400
+  Multi-visit: 7415 | Overlap with CGM+DEXA+Retina: 6154
+  Multi-visit overlap (CGM+DEXA+Retina+this): 2041
+  N features: 4
+
+liver:
+  Total: 13480 subj | BL=13393 | 02=7246 | 04=3690
+  Multi-visit: 7934 | Overlap with CGM+DEXA+Retina: 6164
+  Multi-visit overlap (CGM+DEXA+Retina+this): 2082
+  N features: 11
+
+cardiovascular_system:
+  Total: 13481 subj | BL=13479 | 02=7221 | 04=3543
+  Multi-visit: 7869 | Overlap with CGM+DEXA+Retina: 6165
+  Multi-visit overlap (CGM+DEXA+Retina+this): 2076
+  N features: 167
+
+sleep:
+  Total: 11672 subj | BL=10106 | 02=5616 | 04=2187
+  Multi-visit: 5374 | Overlap with CGM+DEXA+Retina: 5985
+  Multi-visit overlap (CGM+DEXA+Retina+this): 1662
+  N features: 127
+
+gait:
+  Total: 2888 subj | BL=501 | 02=1192 | 04=1019
+  Multi-visit: 0 | Overlap with CGM+DEXA+Retina: 1894
+  Multi-visit overlap (CGM+DEXA+Retina+this): 0
+  N features: 152
+
+============================================================
+SUMMARY TABLE (sorted by multi-visit overlap with core 3)
+============================================================
+             modality  total_subjects  baseline  02_00_visit  multi_visit_subjects  overlap_with_core3  multi_visit_overlap_core3
+                liver           13480     13393         7246                  7934                6164                       2082
+cardiovascular_system           13481     13479         7221                  7869                6165                       2076
+        hematopoietic           13296     13059         6385                  7415                6154                       2041
+        immune_system           13296     13059         6385                  7415                6154                       2041
+   blood_tests_lipids           13296     13059         6385                  7415                6154                       2041
+       renal_function           13296     13059         6385                  7415                6154                       2041
+           microbiome           12713     12364         6337                  6869                6083                       1949
+                sleep           11672     10106         5616                  5374                5985                       1662
+metabolites_annotated            9337      9231         3438                  3535                4349                       1198
+          nightingale            7019      6507         1327                   815                3721                        230
+           proteomics            3143      3042          559                   508                1348                        158
+         blood_lipids            6177      6177            0                     0                3018                          0
+                 gait            2888       501         1192                     0                1894                          0

@@ -1,0 +1,72 @@
+=== dxa_dataset.h5 ===
+Size: 1.47 GB
+Total entries: 11540
+Sample keys: ['10K_1001201093_02_00_visit', '10K_1001201093_04_00_visit', '10K_1002254441_02_00_visit', '10K_1007400622_02_00_visit', '10K_1007474664_02_00_visit']
+
+First key: 10K_1001201093_02_00_visit
+Sub-keys: ['bone', 'crops', 'tissue']
+  bone: shape=(402, 124), dtype=uint8
+  crops: ['0', '1', '2']
+  tissue: shape=(402, 124), dtype=uint8
+
+=== Parsing subject-visit keys ===
+Visit distribution: {'02_00_visit': 4193, '04_00_visit': 3426, 'baseline': 2825, '06_00_visit': 893, '03_01_visit': 110, '05_01_visit': 48, '01_01_visit': 37, '00_01_visit': 6, '04_01_visit': 1, '06_02_visit': 1}
+Unique subjects: 8820
+Subjects with 2+ visits: 2638
+Subjects with 3+ visits: 81
+
+=== Checking actual numpy file content ===
+Found large file: 2459496425/00_00_visit/2024_03_18/file1_0002_000008_1710743575038b.npy (47248 bytes)
+  shape: (380, 124), dtype: uint8
+Found large file: 7731592186/02_00_visit/2024_02_12/file1_0002_000008_170772860804a0.npy (50596 bytes)
+  shape: (407, 124), dtype: uint8
+Found large file: 8850529556/02_00_visit/2024_03_05/file1_0002_000004_1709632503030e.npy (47248 bytes)
+  shape: (380, 124), dtype: uint8
+Found large file: 1641950637/00_00_visit/2020_11_16/file1_0002_000001_174550073501f2.npy (95228 bytes)
+  shape: (317, 300), dtype: uint8
+Found large file: 3673773322/02_00_visit/2023_09_05/file1_0002_000008_169451537002d4.npy (45884 bytes)
+  shape: (369, 124), dtype: uint8
+Found large file: 3673773322/04_00_visit/2025_09_11/file4_0001_000001_17575739530069.npy (6312500 bytes)
+  shape: (1649, 1276, 3), dtype: uint8
+Found large file: 9763837871/06_00_visit/2025_10_16/file4_0001_000001_1760605940011b.npy (6312500 bytes)
+  shape: (1649, 1276, 3), dtype: uint8
+Found large file: 4910927769/02_00_visit/2023_08_06/file1_0002_000002_1691303657004b.npy (73208 bytes)
+  shape: (261, 280), dtype: uint8
+Found large file: 4910927769/04_00_visit/2025_09_02/file1_0002_000001_175679286208c5.npy (95228 bytes)
+  shape: (317, 300), dtype: uint8
+Found large file: 9656461736/02_00_visit/2023_06_05/file1_0002_000008_16859634870044.npy (50596 bytes)
+  shape: (407, 124), dtype: uint8
+Found large file: 9656461736/04_00_visit/2025_07_27/file1_0002_000005_175359397309c2.npy (94628 bytes)
+  shape: (315, 300), dtype: uint8
+Found large file: 6338026203/06_00_visit/2025_06_30/file4_0001_000008_175126926003a2.npy (6312500 bytes)
+  shape: (1649, 1276, 3), dtype: uint8
+Found large file: 6338026203/04_00_visit/2023_07_24/file1_0002_000001_16901970950123.npy (86828 bytes)
+  shape: (289, 300), dtype: uint8
+Found large file: 9550363475/04_00_visit/2025_01_13/file1_0002_000002_17367648960496.npy (73208 bytes)
+  shape: (261, 280), dtype: uint8
+Found large file: 8283026340/02_00_visit/2023_08_17/file4_0001_000005_16932282400293.npy (2811728 bytes)
+  shape: (1100, 852, 3), dtype: uint8
+Found large file: 8283026340/04_00_visit/2025_07_27/file1_0002_000009_17536036430a28.npy (46628 bytes)
+  shape: (375, 124), dtype: uint8
+Found large file: 3284324844/00_00_visit/2023_09_20/file4_0001_000003_169521004604b6.npy (2811728 bytes)
+  shape: (1100, 852, 3), dtype: uint8
+Found large file: 1510112003/00_00_visit/2022_12_08/file1_0002_000008_172493482008a7.npy (48612 bytes)
+  shape: (391, 124), dtype: uint8
+Found large file: 5082170717/02_00_visit/2023_04_20/file1_0002_000003_1681989925029a.npy (74328 bytes)
+  shape: (265, 280), dtype: uint8
+Found large file: 5349913310/00_00_visit/2023_03_19/file4_0001_000008_1708863942090f.npy (6312500 bytes)
+  shape: (1649, 1276, 3), dtype: uint8
+Found large file: 7352222869/02_00_visit/2024_08_05/file1_0002_000001_17228416330f82.npy (95528 bytes)
+  shape: (318, 300), dtype: uint8
+Found large file: 6260630157/06_00_visit/2025_09_08/file4_0001_000003_17573108490b16.npy (6312500 bytes)
+  shape: (1649, 1276, 3), dtype: uint8
+Found large file: 6260630157/04_00_visit/2024_01_18/file1_0002_000009_170555959609a8.npy (47248 bytes)
+  shape: (380, 124), dtype: uint8
+Found large file: 5617883758/02_00_visit/2024_09_15/file1_0002_000009_172639384604d8.npy (50596 bytes)
+  shape: (407, 124), dtype: uint8
+Found large file: 6295492427/04_00_visit/2024_02_22/file4_0001_000011_17085882470674.npy (6312500 bytes)
+  shape: (1649, 1276, 3), dtype: uint8
+Found large file: 2352116480/02_00_visit/2025_03_26/file1_0002_000003_17429772410549.npy (74328 bytes)
+  shape: (265, 280), dtype: uint8
+Found large file: 2352116480/00_00_visit/2023_01_31/file1_0002_000002_168484686101c4.npy (65928 bytes)
+  shape: (235, 280), dtype: uint8

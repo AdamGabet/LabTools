@@ -1,0 +1,16 @@
+=== DXA top-level dirs ===
+Dirs: ['numpy', 'dicom', 'pdf', 'data', 'dxa_dataset.h5']
+
+=== numpy dir ===
+Total entries: 3585
+Sample: ['logs', '2459496425', '7731592186', '8850529556', '1641950637']
+
+First subject dir: 2459496425
+  Visits/files: ['00_00_visit']
+  00_00_visit/ -> ['2024_03_18']
+    2024_03_18: 324 bytes
+
+=== Subject coverage ===
+Total subjects in numpy: 3584
+10-digit IDs (10K format): 3584
+Visit count distribution (sample 500): Counter({1: 394, 2: 104, 3: 2})

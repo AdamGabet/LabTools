@@ -1,0 +1,21 @@
+max_subjects=5
+skip_tabular=True
+signal:cgm path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/cgm subjects=5 subjects_with_date=5
+signal:sleep path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/itamar/zzp subjects=5 subjects_with_date=5
+signal:dexa path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/dxa/dicom subjects=4 subjects_with_date=4
+signal:ecg path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/ecg/dicom subjects=3 subjects_with_date=3
+signal:retina path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/eyes subjects=4 subjects_with_date=4
+signal:ultrasound path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/ultrasound/jpg subjects=5 subjects_with_date=5
+signal:voice path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/voice subjects=3 subjects_with_date=3
+signal:abi path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/abi/data subjects=5 subjects_with_date=5
+signal:gait path=/net/mraid20/ifs/wisdom/segal_lab/jafar/Adam/skeleton_data/skeleton_full_data_sept/all_together subjects=2 subjects_with_date=2
+tabular:metabolites skipped
+tabular:blood_test skipped
+tabular:microbiome skipped
+tabular:nightingale skipped
+tabular:mental skipped
+tabular:proteomics skipped
+total_subjects=5
+subjects_with_3plus_modalities=5
+subjects_with_5plus_modalities=5
+subjects_with_all_modalities=0

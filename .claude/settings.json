@@ -3,6 +3,141 @@
     "hpp": {
       "description": "HPP/10K dataset research skill - data loading, cross-validation, biomarker analysis",
       "path": ".claude/hpp-research.md"
+    },
+    "cross-sectional-association-study": {
+      "description": "Pattern for exposure-outcome association studies with confound control",
+      "path": ".claude/cross-sectional-association-study.md"
+    },
+    "data-quality-check": {
+      "description": "Check distributions of age, gender, BMI; choose correct ranges; when to stratify",
+      "path": ".claude/data-quality-check.md"
+    },
+    "disease-groups": {
+      "description": "WHO-based disease groupings, helper functions, color schemes",
+      "path": ".claude/disease-groups.md"
+    },
+    "study-cohorts": {
+      "description": "HPP cohort types (10K, BRCA, T1D, etc.); when to filter/stratify by cohort",
+      "path": ".claude/study-cohorts.md"
+    },
+    "family-history": {
+      "description": "Family medical conditions and background features; hereditary risk",
+      "path": ".claude/family-history.md"
+    },
+    "create-report": {
+      "description": "Guidelines for creating clean PDF reports with figures",
+      "path": ".claude/create-report.md"
+    },
+    "hpp-data-insights": {
+      "description": "Empirical observations about data distributions, validated associations, and unexpected findings",
+      "path": ".claude/hpp-data-insights.md"
+    },
+    "pdf-visual-audit": {
+      "description": "Visual audit loop for PDF reports using PyMuPDF",
+      "path": ".claude/pdf-visual-audit.md"
     }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(uv *)",
+      "Bash(pip *)",
+      "Bash(jupyter *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(mkdir *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Read(**)",
+      "Write(**)",
+      "Edit(**)",
+      "MultiEdit(**)",
+      "Glob(**)",
+      "Grep(**)",
+      "NotebookRead(**)",
+      "NotebookEdit(**)",
+      "WebFetch(*)",
+      "TodoRead",
+      "TodoWrite"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(sudo *)",
+      "Bash(chmod *)",
+      "Bash(curl *)",
+      "Bash(wget *)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/session-start.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/pre-read.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/pre-write.js\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/post-read.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/post-write.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.wolf/hooks/stop.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }

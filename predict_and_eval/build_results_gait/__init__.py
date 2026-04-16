@@ -1,2 +1,0 @@
-from .compare_results_gait import compare_and_collect_results_gait
-

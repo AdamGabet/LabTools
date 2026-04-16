@@ -1,0 +1,17 @@
+=== Per-visit coverage (JEPA retina embeddings) ===
+baseline: CGM=13352, DEXA=13491, Prot=3042, Retina(JEPA)=5982, All4=1518, +Cardio=1518
+02_00_visit: CGM=6499, DEXA=7221, Prot=559, Retina(JEPA)=3322, All4=384, +Cardio=384
+04_00_visit: CGM=3575, DEXA=3544, Prot=74, Retina(JEPA)=301, All4=34, +Cardio=34
+
+=== Multi-visit cohort ===
+CGM+DEXA+Prot at 2+ visits: 418
+  + retina at any visit: 400
+  + cardio: 400
+Visit count distribution: {2: 390, 3: 10}
+Has baseline: 399, has 02: 358, has 04: 53
+
+=== Cohort demographics ===
+Demographics available for 400 subjects
+Gender: {0.0: 200, 1.0: 200}
+
+All Age_Gender_BMI columns: ['age', 'gender', 'bmi']

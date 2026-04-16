@@ -1,0 +1,21 @@
+max_subjects=None
+skip_tabular=False
+signal:cgm path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/cgm subjects=11822 subjects_with_date=11167
+signal:sleep path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/itamar/zzp subjects=11875 subjects_with_date=11875
+signal:dexa path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/dxa/dicom subjects=8808 subjects_with_date=8808
+signal:ecg path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/ecg/dicom subjects=8478 subjects_with_date=8478
+signal:retina path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/eyes subjects=12016 subjects_with_date=12016
+signal:ultrasound path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/ultrasound/jpg subjects=11954 subjects_with_date=11954
+signal:voice path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/voice subjects=9160 subjects_with_date=9104
+signal:abi path=/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/abi/data subjects=12718 subjects_with_date=12323
+signal:gait path=/net/mraid20/ifs/wisdom/segal_lab/jafar/Adam/skeleton_data/skeleton_full_data_sept/all_together subjects=3480 subjects_with_date=3264
+tabular:metabolites loader=UntargetedMetabolomicsLoader subjects=9124 subjects_with_date=9124
+tabular:blood_test loader=BloodTestsLoader subjects=14764 subjects_with_date=14763
+tabular:microbiome loader=GutMBLoader subjects=11439 subjects_with_date=11439
+tabular:nightingale loader=NightingaleLoader subjects=9815 subjects_with_date=9806
+tabular:mental loader=MentalLoader subjects=11503 subjects_with_date=11503
+tabular:proteomics loader=OlinkLoader subjects=4913 subjects_with_date=4913
+total_subjects=16461
+subjects_with_3plus_modalities=13500
+subjects_with_5plus_modalities=13227
+subjects_with_all_modalities=655

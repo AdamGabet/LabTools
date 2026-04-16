@@ -1,0 +1,184 @@
+
+=== SIRT1 ===
+TOP POSITIVE:
+Phenylalanylphenylalanine                                      0.048879
+Phenylalanylthreonine                                          0.042906
+gamma-glutamylleucine                                          0.029704
+Fibrinopeptide A (2-15)                                        0.028728
+Fibrinopeptide A (3-15)                                        0.025391
+Methyldecanoylcarnitine_Undecanoylcarnitine                    0.021215
+Estrone sulfate_Estrone sulphate                               0.018266
+Cholic acid glucuronide(isomer)                                0.015095
+2-Carboxy-4-dodecanolide                                       0.014344
+LPE(14_0_0_0)_LPE(0_0_14_0)                                    0.014172
+Mesobilirubinogen (I-urobilinogen)                             0.013677
+12a-Hydroxy-3-oxocholadienic acid_Bufalin                      0.013339
+Sphingosine 1-phosphate (d16_1-P)                              0.013208
+Pregnenolone sulfate_3beta-Hydroxypregn-5-en-20-one sulfate    0.012219
+Cholic acid glucuronide                                        0.011644
+Cortolone-3-glucuronide                                        0.011071
+11beta-hydroxyandrosterone glucuronide                         0.010934
+Sonchuside C_\tAbscisic alcohol 11-glucoside                   0.010620
+Enterodiol glucuronide                                         0.010472
+MG(PGJ2_0_0_0_0)_MG(0_0_PGJ2_0_0)                              0.009914
+
+TOP NEGATIVE:
+HPAA sulfate                                                                                                       -0.020826
+2-propenamide  3-(3 4-dihydroxyphenyl)- (caffeic acid amide)                                                       -0.021413
+Fibrinopeptide A (5-16)_                                                                                           -0.021952
+4-Ethylphenylsulfate_3-Ethylphenylsulfate.1                                                                        -0.022252
+Urolithin A-3-O-glucuronide_Urolithin A-8-O-glucuronide                                                            -0.023828
+2 5-Dihydroxybenzenesulfonic Acid _Hydroquinone sulfate_Pyrocatechol sulfate                                       -0.024461
+O-Cresol sulfate_p-Cresol sulfate                                                                                  -0.025346
+Dodecanedioic acid                                                                                                 -0.026079
+3-carboxy-4-methyl-5-pentyl-2-furanpropanoic acid(3-CMPFP)                                                         -0.027362
+Monomenthyl succinate_5-Nonyltetrahydro-2-oxo-3-furancarboxylic acid_(6R 8Z)-6-Hydroxy-3-oxotetradecenoic acid     -0.027978
+Monomenthyl succinate_5-Nonyltetrahydro-2-oxo-3-furancarboxylic acid_(6R 8Z)-6-Hydroxy-3-oxotetradecenoic acid.1   -0.027978
+Isopropyl 4-hydroxybenzoate_propyl 4-hydroxybenzoate                                                               -0.028868
+3-[4-methoxy-3-(sulfooxy)phenyl]propanoic acid_Dihydroferulic acid 4-O-sulfate                                     -0.029316
+Acetaminophen glucuronide                                                                                          -0.033785
+Isobutyl 4-hydroxybenzoate_Butylparaben                                                                            -0.039232
+Fibrinopeptide B (1-12)                                                                                            -0.039866
+Fibrinopeptide A  human                                                                                            -0.049944
+Fibrinopeptide B (1-13)                                                                                            -0.051937
+DSGEGDFXAEGGGVR_(eptide derivative of fibrinogen peptide A)                                                        -0.067402
+Fibrinopeptide A (3-16)                                                                                            -0.067607
+====================
+
+=== SIRT2 ===
+TOP POSITIVE:
+Phenylalanylphenylalanine                                                                                                 0.173311
+Phenylalanylthreonine                                                                                                     0.130412
+Fibrinopeptide A (3-15)                                                                                                   0.084481
+Fibrinopeptide A (8-16)                                                                                                   0.078351
+12a-Hydroxy-3-oxocholadienic acid_Bufalin                                                                                 0.070215
+Fibrinopeptide A (2-15)                                                                                                   0.068029
+2 3-Methylene suberic acid_Decadienedioic acid _2E 4E)-2 7-Dimethyl-2 4-octadienedioic acid_3 4-Methylene suberic acid    0.053750
+16a-Hydroxydehydroepiandrosterone 3-sulfate_16b-Hydroxydehydroepiandrosterone sulfate_16a-Hydroxy dhea 3-sulfuric acid    0.051970
+Mesobilirubinogen (I-urobilinogen)                                                                                        0.051375
+C20H26O8                                                                                                                  0.047954
+gamma-glutamylleucine                                                                                                     0.042920
+Estrone sulfate_Estrone sulphate                                                                                          0.039720
+Cholic acid glucuronide.1                                                                                                 0.038375
+1 11-Undecanedicarboxylic acid                                                                                            0.036599
+Cholic acid glucuronide                                                                                                   0.035752
+biliverdin                                                                                                                0.035173
+Sphingosine 1-phosphate (d16_1-P)                                                                                         0.034231
+11beta-hydroxyandrosterone glucuronide                                                                                    0.033757
+Tetrahydroaldosterone-3-glucuronide                                                                                       0.032783
+Cholic acid glucuronide(isomer)                                                                                           0.032610
+
+TOP NEGATIVE:
+LysoPE(0_0_16_0)_LysoPE(16_0_0_0)                                                                                                  -0.041757
+LysoPE(0_0_16_0)_LysoPE(16_0_0_0)_1-PPEM                                                                                           -0.041757
+3-(3 5-dihydroxyphenyl)-1-propanoic acid sulphate_3-hydroxy-3-(3-hydroxyphenyl)propanoic acid-O-sulphate_dihydrocaffeate sulfate   -0.041974
+3-(3 5-dihydroxyphenyl)-1-propanoic acid sulphate_3-hydroxy-3-(3-hydroxyphenyl)propanoic acid-O-sulphate                           -0.041974
+4-Ethylphenylsulfate_3-Ethylphenylsulfate                                                                                          -0.045423
+Tetradecanedioate(C14-dicarboxylic acid )                                                                                          -0.046832
+Enterolactone 3-sulfate                                                                                                            -0.050138
+Phenylacetylglutamine                                                                                                              -0.053079
+Urolithin A-3-O-glucuronide_Urolithin A-8-O-glucuronide                                                                            -0.057817
+p-Cresol glucuronide_P-Tolyl-β-D-glucuronide                                                                                       -0.060022
+Enterolactone 3-glucuronide_Enterolactone 3-glucuronide                                                                            -0.061077
+6-Hydroxyindoxyl sulfate                                                                                                           -0.063328
+2 5-Dihydroxybenzenesulfonic Acid _Hydroquinone sulfate_Pyrocatechol sulfate                                                       -0.066124
+O-Cresol sulfate_p-Cresol sulfate                                                                                                  -0.067804
+Isobutyl 4-hydroxybenzoate_Butylparaben                                                                                            -0.069742
+Fibrinopeptide A  human                                                                                                            -0.085897
+Fibrinopeptide B (1-12)                                                                                                            -0.093993
+Fibrinopeptide A (3-16)                                                                                                            -0.124854
+DSGEGDFXAEGGGVR_(eptide derivative of fibrinogen peptide A)                                                                        -0.134913
+Fibrinopeptide B (1-13)                                                                                                            -0.146916
+====================
+
+=== TNF ===
+TOP POSITIVE:
+12a-Hydroxy-3-oxocholadienic acid_Bufalin                                                                                  0.073927
+11beta-hydroxyandrosterone glucuronide                                                                                     0.056823
+Cholic acid glucuronide.1                                                                                                  0.049334
+Sulfolithocholic acid                                                                                                      0.043084
+3 4-Methylenesebacic acid_Senkyunolide N                                                                                   0.040244
+gamma-glutamylleucine                                                                                                      0.040034
+Mesobilirubinogen (I-urobilinogen)                                                                                         0.040002
+7-HOC acid                                                                                                                 0.039379
+acesulfame                                                                                                                 0.038892
+Ursodeoxycholic acid 3-sulfate_Chenodeoxycholic acid 3-sulfate_3-Ketopetromyzonol sulfate_Chenodeoxycholic acid sulfate    0.032706
+L-Monomenthyl glutarate                                                                                                    0.031245
+Cholic acid glucuronide(isomer)                                                                                            0.030076
+Fibrinopeptide A (2-15)                                                                                                    0.023709
+Cholic acid glucuronide                                                                                                    0.023528
+3a 7b 12a-Trihydroxyoxocholanyl-Glycine_Glycohyocholic acid_Glycocholic acid                                               0.020225
+Methyldecanoylcarnitine_Undecanoylcarnitine                                                                                0.018953
+1 11-Undecanedicarboxylic acid                                                                                             0.017843
+2-Carboxy-4-dodecanolide                                                                                                   0.017826
+Enterodiol sulfate                                                                                                         0.016304
+Tetrahydroaldosterone-3-glucuronide                                                                                        0.016196
+
+TOP NEGATIVE:
+Caffeic acid 4-O-sulfate_Caffeic acid 3-O-sulfate_ 3 5-Dihydroxycinnamic acid sulfate                                     -0.029557
+Urolithin-3-sulfate                                                                                                       -0.030030
+N-Hydroxy-L-tryptophan                                                                                                    -0.030643
+cis-p-Coumaric acid sulfate_p-Coumaric acid sulfate_O-Coumaric acid sulfate_2E)-3-[3-(sulfooxy)phenyl]prop-2-enoic acid   -0.031408
+Urolithin A-3-O-glucuronide_Urolithin A-8-O-glucuronide                                                                   -0.032005
+Fibrinopeptide A (3-16)                                                                                                   -0.032476
+LysoPE(0_0_18_3(6Z 9Z 12Z))_LysoPE(0_0_18_3(9Z 12Z 15Z))_LysoPE(18_3(6Z 9Z 12Z)_0_0)_\tLysoPE(18_3(9Z 12Z 15Z)_0_0)       -0.033292
+LysoPE(0_0_18_3(6Z 9Z 12Z))_LysoPE(0_0_18_3(9Z 12Z 15Z))_LysoPE(18_3(6Z 9Z 12Z)_0_0)_\tLysoPE(18_3(9Z 12Z 15Z)_0_0).1     -0.033292
+3-Bromo-5-chloro-2 6-dihydroxybenzoic acid                                                                                -0.034003
+4-Ethylphenylsulfate_3-Ethylphenylsulfate.1                                                                               -0.037223
+paraxanthine_theobromine_theophylline                                                                                     -0.037344
+3- Allylphenol sulfate_\t4- Allylphenol sulfate                                                                           -0.037752
+Phenylalanylthreonine                                                                                                     -0.038335
+Isopropyl 4-hydroxybenzoate_propyl 4-hydroxybenzoate                                                                      -0.038995
+4-Hydroxyphenylacetic acid sulfate                                                                                        -0.042762
+Tryptophan                                                                                                                -0.050427
+Isobutyl 4-hydroxybenzoate_Butylparaben                                                                                   -0.054607
+Estrone sulfate_Estrone sulphate                                                                                          -0.054708
+xanthurenate                                                                                                              -0.055943
+3 4-Methyleneazelaic acid                                                                                                 -0.065655
+====================
+
+=== IL6 ===
+TOP POSITIVE:
+12a-Hydroxy-3-oxocholadienic acid_Bufalin                                                                                  0.226717
+Fibrinopeptide A  human                                                                                                    0.198985
+Cholic acid glucuronide.1                                                                                                  0.180839
+DSGEGDFXAEGGGVR_(eptide derivative of fibrinogen peptide A)                                                                0.165138
+Fibrinopeptide A (2-15)                                                                                                    0.138879
+7-HOC acid                                                                                                                 0.127953
+Fibrinopeptide B (1-13)                                                                                                    0.124544
+2 3-Methylene suberic acid_Decadienedioic acid _2E 4E)-2 7-Dimethyl-2 4-octadienedioic acid_3 4-Methylene suberic acid     0.119935
+Phenylalanylphenylalanine                                                                                                  0.102361
+Fibrinopeptide A (3-16)                                                                                                    0.101232
+Fibrinopeptide A (5-16)_                                                                                                   0.096483
+Cortolone-3-glucuronide                                                                                                    0.084782
+Sulfolithocholic acid                                                                                                      0.079642
+Sphingosine 1-phosphate (d16_1-P)                                                                                          0.075045
+Mesobilirubinogen (I-urobilinogen)                                                                                         0.070402
+Ursodeoxycholic acid 3-sulfate_Chenodeoxycholic acid 3-sulfate_3-Ketopetromyzonol sulfate_Chenodeoxycholic acid sulfate    0.065711
+3 4-Methylenesebacic acid_Senkyunolide N                                                                                   0.064634
+Fibrinopeptide A (3-15)                                                                                                    0.059922
+16a-Hydroxydehydroepiandrosterone 3-sulfate_16b-Hydroxydehydroepiandrosterone sulfate_16a-Hydroxy dhea 3-sulfuric acid     0.055364
+1 11-Undecanedicarboxylic acid                                                                                             0.051857
+
+TOP NEGATIVE:
+PC(17_2(9Z 12Z)_0_0)                                                                                                      -0.061385
+4-Vinylphenol sulfate                                                                                                     -0.061824
+LysoPE(0_0_18_1(11Z))_\tLysoPE(0_0_18_1(9Z))_LysoPE(18_1(11Z)_0_0)_LysoPE(18_1(9Z)_0_0).1                                 -0.064755
+LysoPE(0_0_18_1(11Z))_\tLysoPE(0_0_18_1(9Z))_LysoPE(18_1(11Z)_0_0)_LysoPE(18_1(9Z)_0_0)                                   -0.064755
+LysoPE(0_0_16_0)_LysoPE(16_0_0_0)_1-PPEM                                                                                  -0.065711
+LysoPE(0_0_16_0)_LysoPE(16_0_0_0)                                                                                         -0.065711
+2 5-Dihydroxybenzenesulfonic Acid _Hydroquinone sulfate_Pyrocatechol sulfate                                              -0.069440
+biliverdin                                                                                                                -0.070364
+cis-p-Coumaric acid sulfate_p-Coumaric acid sulfate_O-Coumaric acid sulfate_2E)-3-[3-(sulfooxy)phenyl]prop-2-enoic acid   -0.070643
+Enterolactone 3-sulfate                                                                                                   -0.073474
+Tetradecanedioate(C14-dicarboxylic acid )                                                                                 -0.074352
+4-Ethylphenylsulfate_3-Ethylphenylsulfate.1                                                                               -0.075167
+C20H26O8                                                                                                                  -0.076346
+3- Allylphenol sulfate_\t4- Allylphenol sulfate                                                                           -0.078821
+Bilirubin_Lumirubin_(4E 15E)-Bilirubin_(4E 15Z)-Bilirubin                                                                 -0.079661
+Enterolactone 3-glucuronide_Enterolactone 3-glucuronide                                                                   -0.088905
+C20H26O7                                                                                                                  -0.109015
+Pregnenolone sulfate_3beta-Hydroxypregn-5-en-20-one sulfate                                                               -0.115379
+3 4-Methyleneazelaic acid                                                                                                 -0.116125
+Isobutyl 4-hydroxybenzoate_Butylparaben                                                                                   -0.116482
+====================

@@ -1,0 +1,32 @@
+=== CGM RAW DATA ===
+Path: /net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/cgm
+Exists: True
+Total files: 12209
+Sample files: ['9763955671_20200820.txt', '8295546141_20220814.txt', '1770321851_20200311.txt', '2860325259_20230313.txt', '5803065225_20211024.txt']
+
+Sample file: 9763955671_20200820.txt
+Size: 42909 bytes
+Columns: ['# 9763955671']
+Head:
+                                       # 9763955671
+0  ID\tTime\tRecord Type\tHistoric Glucose (mmol/L)
+1                 3114869\t2020/08/20 10:10\t0\t4.0
+2                 3114870\t2020/08/20 10:25\t0\t3.9
+File extensions: {'.txt': 11140, '': 1069}
+
+=== DEXA RAW DATA ===
+Path: /net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/dxa
+Exists: True
+Total entries: 7
+Sample entries: ['numpy', 'dicom', '._.DS_Store', '.DS_Store', 'pdf']
+
+First entry is dir: True
+  Sub-files: ['logs', '2459496425', '7731592186', '8850529556', '1641950637']
+  Sample file size: 320 bytes
+  CSV error: [Errno 21] Is a directory: '/net/mraid20/ifs/wisdom/segal_lab/genie/LabData/Data/10K/aws_lab_files/dxa/numpy/logs'
+
+Checking for empty DEXA entries...
+  Of first 200: 7 non-empty, 0 empty/tiny
+
+Parsing subject-visit structure...
+Sample parsed: [{'raw_name': 'numpy', 'parts': ['numpy']}, {'raw_name': 'dicom', 'parts': ['dicom']}, {'raw_name': '._.DS_Store', 'parts': ['.', '.DS', 'Store']}]

@@ -1,0 +1,187 @@
+=== Loading raw modality indices ===
+cgm: {'baseline': 11432, '02_00_visit': 568, '04_00_visit': 131, '06_00_visit': 9}
+ecg: {'baseline': 1277, '02_00_visit': 2790, '04_00_visit': 2115, '06_00_visit': 50}
+dexa: {'baseline': 2825, '02_00_visit': 4193, '04_00_visit': 3426, '06_00_visit': 893}
+retina: {'baseline': 5982, '02_00_visit': 3322, '04_00_visit': 301, '06_00_visit': 0}
+met: {'baseline': 9231, '02_00_visit': 3438, '04_00_visit': 707, '06_00_visit': 0}
+
+=== Fixed visit pairs ===
+
+combo=('cgm', 'dexa', 'retina', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('ecg', 'dexa', 'retina', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('dexa', 'retina', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'retina', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('ecg', 'retina', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'dexa', 'met')
+  pair=('baseline', '02_00_visit'): raw=1, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('ecg', 'dexa', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'dexa', 'retina')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('ecg', 'dexa', 'retina')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('dexa', 'retina')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'dexa')
+  pair=('baseline', '02_00_visit'): raw=9, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=9, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'retina')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('ecg', 'dexa')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=5, raw+kpi=0
+
+combo=('ecg', 'retina')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'ecg')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('dexa', 'met')
+  pair=('baseline', '02_00_visit'): raw=59, raw+kpi=14
+  pair=('baseline', '04_00_visit'): raw=2, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=13, raw+kpi=0
+
+combo=('retina', 'met')
+  pair=('baseline', '02_00_visit'): raw=3, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+combo=('cgm', 'met')
+  pair=('baseline', '02_00_visit'): raw=98, raw+kpi=6
+  pair=('baseline', '04_00_visit'): raw=23, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=4, raw+kpi=1
+
+combo=('ecg', 'met')
+  pair=('baseline', '02_00_visit'): raw=0, raw+kpi=0
+  pair=('baseline', '04_00_visit'): raw=0, raw+kpi=0
+  pair=('02_00_visit', '04_00_visit'): raw=0, raw+kpi=0
+
+=== Any two visits ===
+combo=('cgm', 'dexa', 'retina', 'met'): subjects=0
+  sample=[]
+combo=('ecg', 'dexa', 'retina', 'met'): subjects=0
+  sample=[]
+combo=('dexa', 'retina', 'met'): subjects=0
+  sample=[]
+combo=('cgm', 'retina', 'met'): subjects=0
+  sample=[]
+combo=('ecg', 'retina', 'met'): subjects=0
+  sample=[]
+combo=('cgm', 'dexa', 'met'): subjects=1
+  sample=[('10K_2199234560', ('02_00_visit', 'baseline'))]
+combo=('ecg', 'dexa', 'met'): subjects=0
+  sample=[]
+combo=('cgm', 'dexa', 'retina'): subjects=0
+  sample=[]
+combo=('ecg', 'dexa', 'retina'): subjects=0
+  sample=[]
+combo=('dexa', 'retina'): subjects=0
+  sample=[]
+combo=('cgm', 'dexa'): subjects=19
+  sample=[('10K_8251239434', ('02_00_visit', 'baseline')), ('10K_2307117176', ('02_00_visit', 'baseline')), ('10K_2425564867', ('04_00_visit', 'baseline')), ('10K_1759587018', ('04_00_visit', 'baseline')), ('10K_2296309020', ('04_00_visit', 'baseline')), ('10K_1531044036', ('04_00_visit', 'baseline')), ('10K_3096982135', ('04_00_visit', 'baseline')), ('10K_6678461300', ('04_00_visit', '06_00_visit')), ('10K_6502332120', ('02_00_visit', 'baseline')), ('10K_1301565237', ('04_00_visit', 'baseline'))]
+combo=('cgm', 'retina'): subjects=0
+  sample=[]
+combo=('ecg', 'dexa'): subjects=8
+  sample=[('10K_8966120463', ('04_00_visit', '06_00_visit')), ('10K_1945910425', ('04_00_visit', '06_00_visit')), ('10K_4271090901', ('02_00_visit', '04_00_visit')), ('10K_3942277891', ('02_00_visit', '04_00_visit')), ('10K_7022600234', ('02_00_visit', '04_00_visit')), ('10K_2754847504', ('02_00_visit', '04_00_visit')), ('10K_9469717770', ('04_00_visit', '06_00_visit')), ('10K_9876660473', ('02_00_visit', '04_00_visit'))]
+combo=('ecg', 'retina'): subjects=0
+  sample=[]
+combo=('cgm', 'ecg'): subjects=0
+  sample=[]
+combo=('dexa', 'met'): subjects=74
+  sample=[('10K_1685706881', ('02_00_visit', 'baseline')), ('10K_2201444600', ('02_00_visit', 'baseline')), ('10K_1136999674', ('02_00_visit', 'baseline')), ('10K_1093965066', ('02_00_visit', 'baseline')), ('10K_1216750724', ('02_00_visit', 'baseline')), ('10K_5515919537', ('02_00_visit', '04_00_visit')), ('10K_1712543723', ('02_00_visit', 'baseline')), ('10K_1338138532', ('02_00_visit', 'baseline')), ('10K_1616996660', ('02_00_visit', 'baseline')), ('10K_7610390723', ('02_00_visit', '04_00_visit'))]
+combo=('retina', 'met'): subjects=3
+  sample=[('10K_9627720238', ('02_00_visit', 'baseline')), ('10K_4302183670', ('02_00_visit', 'baseline')), ('10K_2235387741', ('02_00_visit', 'baseline'))]
+combo=('cgm', 'met'): subjects=125
+  sample=[('10K_2078143998', ('04_00_visit', 'baseline')), ('10K_9295715275', ('02_00_visit', 'baseline')), ('10K_5477042505', ('02_00_visit', 'baseline')), ('10K_1838056057', ('02_00_visit', 'baseline')), ('10K_4970520533', ('02_00_visit', 'baseline')), ('10K_2565305637', ('02_00_visit', 'baseline')), ('10K_4136638527', ('04_00_visit', 'baseline')), ('10K_4312438012', ('02_00_visit', 'baseline')), ('10K_4998701236', ('04_00_visit', 'baseline')), ('10K_8966120463', ('04_00_visit', 'baseline'))]
+combo=('ecg', 'met'): subjects=0
+  sample=[]
+
+=== Best 3-modality fixed-pair overlaps ===
+('cgm', 'ecg', 'dexa'): best_pair=('baseline', '02_00_visit'), raw=0
+('cgm', 'ecg', 'retina'): best_pair=('baseline', '02_00_visit'), raw=0
+('cgm', 'ecg', 'met'): best_pair=('baseline', '02_00_visit'), raw=0
+('cgm', 'dexa', 'retina'): best_pair=('baseline', '02_00_visit'), raw=0
+('cgm', 'dexa', 'met'): best_pair=('baseline', '02_00_visit'), raw=1
+('cgm', 'retina', 'met'): best_pair=('baseline', '02_00_visit'), raw=0
+('ecg', 'dexa', 'retina'): best_pair=('baseline', '02_00_visit'), raw=0
+('ecg', 'dexa', 'met'): best_pair=('baseline', '02_00_visit'), raw=0
+('ecg', 'retina', 'met'): best_pair=('baseline', '02_00_visit'), raw=0
+('dexa', 'retina', 'met'): best_pair=('baseline', '02_00_visit'), raw=0
+
+=== Best 2-modality fixed-pair overlaps ===
+('cgm', 'ecg'): best_pair=('baseline', '02_00_visit'), raw=0
+('cgm', 'dexa'): best_pair=('baseline', '02_00_visit'), raw=9
+('cgm', 'retina'): best_pair=('baseline', '02_00_visit'), raw=0
+('cgm', 'met'): best_pair=('baseline', '02_00_visit'), raw=98
+('ecg', 'dexa'): best_pair=('02_00_visit', '04_00_visit'), raw=5
+('ecg', 'retina'): best_pair=('baseline', '02_00_visit'), raw=0
+('ecg', 'met'): best_pair=('baseline', '02_00_visit'), raw=0
+('dexa', 'retina'): best_pair=('baseline', '02_00_visit'), raw=0
+('dexa', 'met'): best_pair=('baseline', '02_00_visit'), raw=59
+('retina', 'met'): best_pair=('baseline', '02_00_visit'), raw=3
+
+=== Subject-level overlap without stage constraints ===
+('cgm', 'dexa', 'retina', 'met'): any-visit subjects=4378
+  ('cgm', 'dexa', 'retina', 'met'): subjects with >=2 visits in every modality=0
+('ecg', 'dexa', 'retina', 'met'): any-visit subjects=2628
+  ('ecg', 'dexa', 'retina', 'met'): subjects with >=2 visits in every modality=0
+('dexa', 'retina', 'met'): any-visit subjects=4624
+  ('dexa', 'retina', 'met'): subjects with >=2 visits in every modality=1
+('cgm', 'dexa', 'met'): any-visit subjects=5091
+  ('cgm', 'dexa', 'met'): subjects with >=2 visits in every modality=94
+('cgm', 'retina', 'met'): any-visit subjects=6688
+  ('cgm', 'retina', 'met'): subjects with >=2 visits in every modality=0
+('cgm', 'met'): any-visit subjects=8678
+  ('cgm', 'met'): subjects with >=2 visits in every modality=185
+('dexa', 'met'): any-visit subjects=5399
+  ('dexa', 'met'): subjects with >=2 visits in every modality=1291
+('dexa', 'retina'): any-visit subjects=6560
+  ('dexa', 'retina'): subjects with >=2 visits in every modality=1
+('ecg', 'dexa'): any-visit subjects=5731
+  ('ecg', 'dexa'): subjects with >=2 visits in every modality=39

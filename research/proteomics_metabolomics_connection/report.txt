@@ -1,0 +1,21 @@
+# Research Report: Proteomics-Metabolomics Integration
+**Project**: The SIRT2-Dipeptide Axis
+**Date**: 2026-04-14
+
+## 1. Objective
+To find a novel connection between the lab's proteomics and metabolomics data.
+
+## 2. Methodology
+- Cohort: Human subjects aged 40-70.
+- Integration: Joined `proteomics.csv` and `metabolites_annotated.csv`.
+- Analysis: Spearman rank correlation between longevity proteins (SIRT1/2) and the full metabolome.
+
+## 3. Results
+We identified a consistent positive correlation between SIRT2 and phenylalanine dipeptides.
+- Top Marker: Phenylalanylphenylalanine ($\rho=0.173$)
+- Secondary Marker: Phenylalanylthreonine ($\rho=0.130$)
+
+## 4. Conclusion
+SIRT2 is linked to a specific aromatic dipeptide signature. This "SIRT2-Dipeptide Axis" provides a new metabolic fingerprint that may be used to study cellular senescence and inflammatory responses in middle-aged adults.
+EOF
+
